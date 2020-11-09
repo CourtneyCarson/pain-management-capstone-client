@@ -6,12 +6,7 @@ export default function LandingPage(props) {
     /* <!-- Landing Page --> */
 
     <div className="landing-page">
-      <nav role="navigation">
-        <a href="url">Home</a>
-        <a href="url">About</a>
-        <a href="url">Treatment</a>
-        <a href="url">Log In</a>
-      </nav>
+     
       <main role="main">
         <section>
           <header>

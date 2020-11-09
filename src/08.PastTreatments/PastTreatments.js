@@ -5,12 +5,7 @@ export default function PastTreatments(props) {
   return (
     // <!-- Past Treatments Page -->
     <div className="past-treatments-page">
-      <nav role="navigation">
-        <a href="url">Home</a>
-        <a href="url">About</a>
-        <a href="url">Treatment</a>
-        <a href="url">Log Out</a>
-      </nav>
+  
       <main role="main">
         <header role="banner">
           <h1>Trigger Point Troubleshooter</h1>

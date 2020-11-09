@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
 import LandingPage from './01.Landing/LandingPage';
 import LogIn from './02.LogIn/LogIn';
@@ -15,7 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Router>
+          <NavBar />
           <Route exact path='/' component={LandingPage} />
           <Route path="/log-in" component={LogIn} />
           <Route path="/sign-up" component={SignUp} />
@@ -24,6 +26,8 @@ class App extends Component {
           <Route path="/how-to" component={HowTo} />
           <Route path="/trigger-point" component={TriggerPoint} />
           <Route path="/past-treatments" component={PastTreatments} />
+          <Route path="/log-out" component={LandingPage} />
+
         </Router>
       </div>
     );

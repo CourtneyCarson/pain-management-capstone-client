@@ -5,13 +5,7 @@ export default function HowTo(props) {
   return (
     // <!-- How To Page -->
 <div className="how-to-page">
-<nav role="navigation">
-  <a href="url">Home</a>
-  <a href="url">About</a>
-  <a href="url">Treatment</a>
-  <a href="url">Log In</a>
 
-</nav>
 <header role="banner">
     <h1>Trigger Point Troubleshooter</h1>
   </header>

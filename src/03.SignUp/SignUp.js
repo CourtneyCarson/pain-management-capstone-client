@@ -5,12 +5,8 @@ export default function SignUp(props) {
   return (
     // <!-- Sign Up Page -->
     <div className="sign-up-page">
-      <nav role="navigation">
-        <a href="url">Home</a>
-        <a href="url">About</a>
-        <a href="url">Treatment</a>
-        <a href="url">Log In</a>
-      </nav>
+  
+
       <main role="main">
         <header role="banner">
           <h1>Trigger Point Troubleshooter</h1>
@@ -36,7 +32,7 @@ export default function SignUp(props) {
             </div>
             <button type='submit'>Register</button>
           </form>
-          <p> Already Have An Account? <a href="url">Log In</a></p>
+          <p> Already Have An Account? <a href="log-in">Log In</a></p>
         </section>
       </main>
       <footer role="content-info">Footer</footer>

@@ -5,13 +5,7 @@ export default function LogIn(props) {
   return (
     // <!-- Log In Page -->
     <div className="log-in-page">
-      <nav role="navigation">
-        <a href="url">Home</a>
-        <a href="url">About</a>
-        <a href="url">Treatment</a>
-        <a href="url">Log In</a>
-
-      </nav>
+     
       <main role="main">
         <header role="banner">
           <h1>Trigger Point Troubleshooter</h1>
@@ -28,7 +22,7 @@ export default function LogIn(props) {
           </div>
           <button type='submit'>Log In</button>
         </form>
-        <p> No Account? <a href="url">Sign Up</a></p>
+        <p> No Account? <a href="sign-up">Sign Up</a></p>
       </main>
       <footer role="content-info">Footer</footer>
     </div>
