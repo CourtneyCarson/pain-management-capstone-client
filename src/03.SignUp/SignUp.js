@@ -34,7 +34,7 @@ export default function SignUp(props) {
           <p> Already Have An Account? <a href="log-in">Log In</a></p>
         </section>
       </main>
-      <footer role="content-info">Footer</footer>
+    
     </div>
   )
 }

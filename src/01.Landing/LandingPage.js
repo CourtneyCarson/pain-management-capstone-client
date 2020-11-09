@@ -27,7 +27,7 @@ export default function LandingPage(props) {
         </section>
 
       </main>
-      <footer role="content-info">Footer</footer>
+  
     </div>
 
   )

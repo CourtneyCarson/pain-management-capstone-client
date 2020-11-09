@@ -19,7 +19,7 @@ export default function AboutPage(props) {
         </section>
 
       </main>
-      <footer role="content-info">Footer</footer>
+     
     </div>
   )
 }

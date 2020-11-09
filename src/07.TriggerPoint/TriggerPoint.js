@@ -20,7 +20,7 @@ export default function TriggerPoint(props) {
         <button type='submit'>Save</button>
         <button type='submit'>Back</button>      
 </main>
-<footer role="content-info">Footer</footer>
+
 </div>
   )
 }

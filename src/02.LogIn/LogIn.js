@@ -24,7 +24,7 @@ export default function LogIn(props) {
         </form>
         <p> No Account? <a href="sign-up">Sign Up</a></p>
       </main>
-      <footer role="content-info">Footer</footer>
+   
     </div>
   )
 }

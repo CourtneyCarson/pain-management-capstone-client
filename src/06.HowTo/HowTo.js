@@ -30,7 +30,7 @@ export default function HowTo(props) {
           </ul>
   </section>
 </main>
-<footer role="content-info">Footer</footer>
+
 </div>
   )
 }

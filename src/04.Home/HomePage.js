@@ -23,7 +23,7 @@ export default function HomePage(props) {
           <input type="image" alt="image" src="http://example.com/path/to/image.png" />
         </section>
       </main>
-      <footer role="content-info">Footer</footer>
+    
     </div>
   )
 }

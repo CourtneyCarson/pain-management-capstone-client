@@ -32,7 +32,7 @@ export default function PastTreatments(props) {
         </section>
       </main>
 
-      <footer role="content-info">Footer</footer>
+   
     </div>
   )
 }
