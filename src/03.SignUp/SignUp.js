@@ -3,9 +3,8 @@ import './SignUp'
 
 export default function SignUp(props) {
   return (
-    // <!-- Sign Up Page -->
+
     <div className="sign-up-page">
-  
 
       <main role="main">
         <header role="banner">
