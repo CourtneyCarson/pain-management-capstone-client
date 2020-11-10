@@ -4,7 +4,7 @@ This will be a troubleshooting application for people to seek out a solution for
 
 
 ## 1. Working Prototype (to do later)
-(Example) You can access a working prototype of the React app here: https://your-app-client.herokuapp.com/ and Node app here: https://your-app-server.herokuapp.com/
+(Example) You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://your-app-server.herokuapp.com/
 
 
 ## 2. User Stories (to do now)
