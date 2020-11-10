@@ -3,7 +3,7 @@ import './PastTreatments'
 
 export default function PastTreatments(props) {
   return (
-    // <!-- Past Treatments Page -->
+   
     <div className="past-treatments-page">
   
       <main role="main">

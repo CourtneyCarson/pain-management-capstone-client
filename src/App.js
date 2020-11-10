@@ -9,7 +9,7 @@ import AboutPage from './05.About/AboutPage';
 import HowTo from './06.HowTo/HowTo';
 import TriggerPoint from './07.TriggerPoint/TriggerPoint';
 import PastTreatments from './08.PastTreatments/PastTreatments';
-import NavBar from './NavBar'
+import NavBar from './09.NavBar/NavBar'
 
 class App extends Component {
   render() {
