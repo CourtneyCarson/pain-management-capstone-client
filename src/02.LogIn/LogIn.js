@@ -3,7 +3,52 @@ import { Link } from "react-router-dom"
 import AuthApiService from '../services/auth-api-service'
 import './LogIn'
 
-export default class LogIn extends React.Component {
+
+class LogIn extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      error: null,
+      params: {
+        loginUsername: "",
+        loginPassword: "",
+      },
+    }
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    
+    const { loginUsername, loginPassword } = event.target
+    
+   
+}
+
+
+
+  validateLoginUsername(inputEmail) {
+    let outputEmail = inputEmail
+    let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
+    if (!inputEmail.match(mailformat)) {
+      outputEmail = ""
+    }
+    return outputEmail
+  }
+
+  validateLoginPassword(inputLoginPassword) {
+    let outputloginPassword = inputLoginPassword
+    let loginPasswordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/
+
+    if (!inputLoginPassword.match(loginPasswordFormat)) {
+      outputloginPassword = ""
+    }
+    return outputloginPassword
+}
+
+
+
+
+
   render() {
     return (
       // <!-- Log In Page -->
@@ -36,11 +81,15 @@ export default class LogIn extends React.Component {
                 Log In
                 </button>
             </form>
-            <p> No Account? <a href="sign-up">Sign Up</a></p>
-
+            <div className="link-register-div">
+              <p> No Account? </p>
+              <Link to="sign-up" className="register-link">Sign Up</Link>
+            </div>
           </div>
         </div>
       </section >
     )
   }
 }
+
+export default LogIn
