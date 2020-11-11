@@ -93,7 +93,7 @@ Register Page
 
 *  (Trigger Points) Results (database table)
     * id (auto-generated)
-    * user_id (foreign-key to match users table)
+    * user_id (foreign-key to match users table (id))
     * image (image)
     * title (note title)
     * content (note text)
@@ -101,7 +101,7 @@ Register Page
 
 *  Notes (database table)
     * id (auto-generated)
-    * trigger_point_id(foreign key to match trigger point table)
+    * trigger_point_id(foreign key to match trigger point table (id))
     * title (note title)
     * content (note text)
     * date-created (auto generated)
