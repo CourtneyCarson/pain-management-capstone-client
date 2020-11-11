@@ -1,4 +1,4 @@
-# Pain Management Capstone (to do now)
+# Pain Management Capstone 
 (One line description of what this app is doing and who is it for)
 This will be a troubleshooting application for people to seek out a solution for their pain, by directing them to a trigger point corresponding to their area of pain. There will be a guide on how Trigger Points work, and how to fix them via massage therapy. 
 
@@ -7,7 +7,7 @@ This will be a troubleshooting application for people to seek out a solution for
 (Example) You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://your-app-server.herokuapp.com/
 
 
-## 2. User Stories (to do now)
+## 2. User Stories 
 This app is for two types of users: a visitor and a logged-in user
   as a visitor
 * I want to understand what I can do with this app (or sign up, or log in)
@@ -69,26 +69,51 @@ The app's functionality includes:
 * Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
 * Development Environment: Heroku, DBeaver
 
-### 5. Wireframes (to do now)
+### 5. Wireframes
 (Example) Landing Page
 :-------------------------:
 ![Landing Page](/github-images/wireframes/landing-page-wireframe.png)
 Register Page
 ![Register Page](/github-images/wireframes/register-page-wireframe.png)
 
-## 6. Front-end Structure - React Components Map (to do later)
+## 6. Front-end Structure - React Components Map 
 * (Example) __Index.js__ (stateless)
     * __App.js__ (stateful)
-        * __LandingPage.js__ (stateful) - gets the _"prop name"_ and the _"callback prop name"_ from the __App.js__
-            * __Login.js__ (stateful) -
-            * __Register.js__ (stateful) -
-        * __Navbar.js__ (stateless) -
+        * __LandingPage.js__ (stateless) 
+        * __Login.js__ (stateful) - user table (user name, full name, password)
+        * __SignUp.js__ (stateful) - user table (user name, full name, password)
+        * __Home.js__ (stateful) - trigger-point table (user_id, image,   title, content, date-created)
+        * __About.js__ (stateless) -
+        * __HowTo.js__ (stateless) -
+        * __TriggerPoint.js__ (stateful) - trigger-point table (user_id, image, title, content, date-created)
+        * __PastTreatments.js__ (stateful) - notes table (trigger_point_id, title, content, date-created)
+        * __Navbar.js__ (stateful) - user table
+        
 
-## 7. Back-end Structure - Business Objects (to do later)
-* (Example) Users (database table)
+## 7. Back-end Structure - Business Objects 
+*  Users (database table)
     * id (auto-generated)
     * username (email validation)
+    * full name (first & last name)
     * password (at least 8 chars, at least one alpha and a special character validation)
+
+*  (Trigger Points) Results (database table)
+    * id (auto-generated)
+    * user_id (foreign-key to match users table)
+    * image (image)
+    * title (note title)
+    * content (note text)
+    * date-created (auto generated)
+
+*  Notes (database table)
+    * id (auto-generated)
+    * trigger_point_id(foreign key to match trigger point table)
+    * title (note title)
+    * content (note text)
+    * date-created (auto generated)
+
+
+
 
 
 ## 8. API Documentation (to do later)
