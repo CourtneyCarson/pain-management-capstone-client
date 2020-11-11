@@ -1,5 +1,4 @@
 # Pain Management Capstone 
-(One line description of what this app is doing and who is it for)
 This will be a troubleshooting application for people to seek out a solution for their pain, by directing them to a trigger point corresponding to their area of pain. There will be a guide on how Trigger Points work, and how to fix them via massage therapy. 
 
 
@@ -43,12 +42,7 @@ This app is for two types of users: a visitor and a logged-in user
 * I want to learn about how to massage trigger points
 * so I can treat my pain
 
-#### (possible) List Page
-* as a logged in user
-* I want to store trigger point information as a list
-* so I can refer back to them later
-
-#### (possible) Past Treatments Page
+#### Past Treatments Page
 * as a logged in user
 * I want to see past pain areas I've had
 * so I can see my progress 
@@ -64,7 +58,7 @@ This app is for two types of users: a visitor and a logged-in user
 The app's functionality includes:
 * (Example) Every User has the ability to create an account
 
-## 4. Technology (done)
+## 4. Technology 
 * Front-End: HTML5, CSS3, JavaScript ES6, React
 * Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
 * Development Environment: Heroku, DBeaver
