@@ -1,32 +1,46 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
+import AuthApiService from '../services/auth-api-service'
 import './LogIn'
 
 export default class LogIn extends React.Component {
   render() {
     return (
       // <!-- Log In Page -->
-      <div className="log-in-page">
-     
-        <main role="main">
-          <header role="banner">
-            <h1>Trigger Point Troubleshooter</h1>
-          </header>
-          <h3>Log In</h3>
-          <form className='signup-form'>
-            <div>
+      <section className="login-component">
+        <div className="log-in-page">
+          <h1 className='login-title'>Trigger Point Troubleshooter</h1>
+          <h3 className="subtitle">Log In</h3>
+          <div className="form-div">
+            <form className='signup-form'>
+
               <label htmlFor="username">Email</label>
-              <input type="text" name='username' id='username' />
-            </div>
-            <div>
+              <input
+                className="login-input"
+                type="text"
+                name='username'
+                placeholder='email@email.com'
+                required
+              />
+
               <label htmlFor="password">Password</label>
-              <input type="password" name='password' id='password' />
-            </div>
-            <button type='submit'>Log In</button>
-          </form>
-          <p> No Account? <a href="sign-up">Sign Up</a></p>
-        </main>
-   
-      </div>
+              <input
+                className="login-input"
+                type="password"
+                name='password'
+                placeholder='password'
+                required
+              />
+
+              <button type='submit' className="login-button">
+                Log In
+                </button>
+            </form>
+            <p> No Account? <a href="sign-up">Sign Up</a></p>
+
+          </div>
+        </div>
+      </section >
     )
   }
 }
