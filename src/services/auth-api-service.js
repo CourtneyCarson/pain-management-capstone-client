@@ -21,7 +21,7 @@ const AuthApiService = {
     })
   },
 
-//login user
+//login user -- CHECK PATH/AUTH/LOGIN ****************
   postLogin(credentials) {
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
       method: 'POST', 

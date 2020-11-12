@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './SignUp'
 import AuthApiService from '../services/auth-api-service'
 
@@ -15,7 +15,11 @@ class SignUp extends Component {
     }
   }
 
-  // signup event handlers? 
+  handleLoginSuccess = user => {
+    window.location = '/homepage'
+  }
+
+  // signup event handlers
   handleSubmit = (event) => {
     event.preventDefault()
     const { registerUsername, registerPassword } = event.target
@@ -58,9 +62,7 @@ class SignUp extends Component {
   render() {
     const errorMessage = this.state.error ? (
       <p className="error-message">{this.state.error}</p>
-    ) : (
-        false
-    )
+    ) : (false)
     return (
       <section className='sign-up-component'>
         <div className="sign-up-page">
@@ -71,13 +73,13 @@ class SignUp extends Component {
             <form className="signup-form" onSubmit={this.handleSubmit}>
               {errorMessage}
               <label htmlFor="username">Email</label>
-              <input 
+              <input
                 className="sign-up-input"
                 type="text"
                 name="registerUsername"
                 placeholder="email@email.com"
                 required />
-              
+
               <label htmlFor="password">Password</label>
               <input
                 className="sign-up-input"
@@ -88,10 +90,10 @@ class SignUp extends Component {
               <button type="submit" className="sign-up-button">Register</button>
             </form>
             <div className="link-register-div">
-            <p> Already Have An Account?</p>
-            <Link to="/log-in" className="login-link">Log In</Link>
+              <p> Already Have An Account?</p>
+              <Link to="/log-in" className="login-link">Log In</Link>
             </div>
-            
+
           </div>
         </div>
       </section>

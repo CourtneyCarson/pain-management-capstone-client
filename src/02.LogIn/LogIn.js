@@ -16,18 +16,31 @@ class LogIn extends Component {
     }
   }
 
+
+
   handleSubmit = (event) => {
     event.preventDefault()
-    
+
     const { loginUsername, loginPassword } = event.target
-    
-   
-}
 
+    AuthApiService.postLogin({
+      userName: loginUsername.value,
+      password: loginPassword.value,
 
+    })
+      
+      .then(response => {
+        loginUsername.value = ""
+        loginPassword.value = ""
+        window.location = '/home'
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
-  validateLoginUsername(inputEmail) {
-    let outputEmail = inputEmail
+  validateloginUsername(inputEmail) {
+    let outputEmail = inputEmail;
     let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
     if (!inputEmail.match(mailformat)) {
       outputEmail = ""
@@ -36,34 +49,37 @@ class LogIn extends Component {
   }
 
   validateLoginPassword(inputLoginPassword) {
-    let outputloginPassword = inputLoginPassword
+    let outputLoginPassword = inputLoginPassword
     let loginPasswordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/
 
     if (!inputLoginPassword.match(loginPasswordFormat)) {
-      outputloginPassword = ""
+      outputLoginPassword = ""
     }
-    return outputloginPassword
-}
+    return outputLoginPassword
+  }
 
-
+  
 
 
 
   render() {
+    const errorMessage = this.state.error ? (
+      <p className="error-message">{this.state.error}</p>) : (false)
+
     return (
-      // <!-- Log In Page -->
       <section className="login-component">
         <div className="log-in-page">
           <h1 className='login-title'>Trigger Point Troubleshooter</h1>
           <h3 className="subtitle">Log In</h3>
           <div className="form-div">
-            <form className='signup-form'>
+            <form className='signup-form' onSubmit={this.handleSubmit}>
+              {errorMessage}
 
               <label htmlFor="username">Email</label>
               <input
                 className="login-input"
                 type="text"
-                name='username'
+                name='loginUsername'
                 placeholder='email@email.com'
                 required
               />
@@ -72,7 +88,7 @@ class LogIn extends Component {
               <input
                 className="login-input"
                 type="password"
-                name='password'
+                name='loginPassword'
                 placeholder='password'
                 required
               />
