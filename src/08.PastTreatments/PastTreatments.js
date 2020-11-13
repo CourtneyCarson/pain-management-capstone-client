@@ -1,7 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './PastTreatments'
 import NoteForm from '../10.NoteForm/NoteForm'
 import config from '../config'
+import TokenService from '../services/token-service'
 
 class PastTreatments extends Component {
   state = {
@@ -9,15 +10,20 @@ class PastTreatments extends Component {
   };
 
   componentDidMount() {
+    console.log(TokenService.getAuthToken())
+    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`;
 
-    let getCollectionByUserId = `${config.API_ENDPOINT}/notes`;
-
-    fetch(getCollectionByUserId)
+    fetch(URL, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      }
+    })
       .then((response) => response.json())
       .then((data) => {
-        this.setState({
-          notes: data,
-        });
+        console.log(data)
+        // this.setState({
+        //   notes: data,
+        // });
       })
       .catch((error) => console.log(error));
   }
@@ -25,14 +31,14 @@ class PastTreatments extends Component {
 
   render() {
     console.log(this.state.notes)
-// set up state 
+    // set up state 
     // component did mount fetch req from get endpoint, set state res body 
     // this.state.notes - map over - generate on clicks while mapping 
     //onClick = {() => this.props.updateAddNotes(note.id)
-  //}
+    //}
     // onclick for button actions 
     return (
-    
+
       <div className="past-treatments-page">
 
         <main role="main">
@@ -62,7 +68,7 @@ class PastTreatments extends Component {
           </section>
         </main>
 
-   
+
       </div>
     )
   }

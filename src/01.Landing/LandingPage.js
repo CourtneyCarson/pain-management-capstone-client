@@ -9,9 +9,9 @@ export default function LandingPage(props) {
         <section>
           <header>
             <h3>Get to the root of your pain</h3>
-            <p>*placeholder for image of trigger point on body*</p>
+            <img src="public/images/SubOccipital.png" />
           </header>
-
+         
           <p>
             I'm baby beard health goth cray, readymade dreamcatcher meggings wolf gluten-free aesthetic
             wayfarers la croix. Street art live-edge dreamcatcher, asymmetrical twee gochujang franzen DIY.

@@ -56,7 +56,12 @@ class TriggerPoint extends Component {
             </section>
             <section>
               <img src="https://loremflickr.com/750/300/landscape?random={id}" />
-              <p> Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi. Franzen fashion axe twee organic. Pinterest taxidermy craft beer tattooed. Readymade vice franzen, green juice you probably haven't heard of them bitters fixie live-edge semiotics raclette. Distillery meh butcher biodiesel keffiyeh pinterest. Intelligentsia irony roof party lumbersexual kickstarter blue bottle. Lo-fi wolf actually 8-bit, +1 meh seitan literally cronut mlkshk flannel occupy tofu post-ironic VHS. </p>
+              <p> Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi.
+              Franzen fashion axe twee organic. Pinterest taxidermy craft beer tattooed.
+              Readymade vice franzen, green juice you probably haven't heard of them bitters
+              fixie live-edge semiotics raclette. Distillery meh butcher biodiesel keffiyeh pinterest.
+              Intelligentsia irony roof party lumbersexual kickstarter blue bottle. Lo-fi wolf actually 8-bit,
+              +1 meh seitan literally cronut mlkshk flannel occupy tofu post-ironic VHS. </p>
               <a href="/how-to">How To Page</a>
             </section>
             <input type='hidden' name='triggerpointId' defaultValue={id}></input>
