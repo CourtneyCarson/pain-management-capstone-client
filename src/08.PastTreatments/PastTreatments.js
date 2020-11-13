@@ -35,61 +35,40 @@ class PastTreatments extends Component {
 
 
   render() {
-    //this.state.params - open string
-    //this.state.params.triggerpontsByUserId - nothing
-    //this.state - error null 
-    //this.triggerpointsByUserId - undefined 
     console.log(this.state.triggerpointsByUserId)
 
-
-    // map through tpUserId - 
-
-    // set up state 
-    // component did mount fetch req from get endpoint, set state res body 
-    // this.state.notes - map over - generate on clicks while mapping 
-    //onClick = {() => this.props.updateAddNotes(note.id)
-    //}
-    // onclick for button actions 
     return (
 
       <div className="past-treatments-page">
 
-        <main role="main">
-          <header role="banner">
-            <h1>Trigger Point Troubleshooter</h1>
-          </header>
-          <section>
-            <div id="myDIV" className="header">
-              <h2>Past Trigger Points</h2>
-            </div>
+
+        <header className="banner">
+          <h1>Trigger Point Troubleshooter</h1>
+        </header>
+        <section>
+          <div id="myDIV" className="header">
+            <h2>Past Trigger Points</h2>
+          </div>
 
 
-            <div>
-              {this.state.triggerpointsByUserId.map(tpByUser => {
-                return <li>{tpByUser.title}
-                  {tpByUser.content}
-                  <img src={tpByUser.image} />
-                </li>
-              })}
-            </div>
+          <div>
+            {this.state.triggerpointsByUserId.map(tpByUser => {
+              return (
+                <ul>
+                  <li>
+                    <h3>{tpByUser.title}</h3>
+                    <img src={tpByUser.image} alt="trigger point" />
+                    <p>{tpByUser.content}</p>
+                    <button >Add Notes</button>
+                    <button >Delete</button>
+                  </li>
+                </ul>
+              )
+            })}
+          </div>
 
-            <ul id="myUL">
-              <li>l</li>
-              <button >Add Notes</button>
-              <button >Delete</button>
-              <li className="checked">Trigger Point</li>
-              <button type='submit'>Add Notes</button>
-              <button type='submit'>Delete</button>
-              <li>Trigger Point</li>
-              <button type='submit'>Add Notes</button>
-              <button type='submit'>Delete</button>
-              <li>Trigger Point</li>
-              <button type='submit'>Add Notes</button>
-              <button type='submit'>Delete</button>
-            </ul>
-            <NoteForm />
-          </section>
-        </main>
+          <NoteForm />
+        </section>
 
 
       </div>
@@ -98,3 +77,18 @@ class PastTreatments extends Component {
 }
 
 export default PastTreatments
+
+
+
+     // set up state 
+    // component did mount fetch req from get endpoint, set state res body 
+    // this.state.notes - map over - generate on clicks while mapping 
+    //onClick = {() => this.props.updateAddNotes(note.id)
+    //}
+    // onclick for button actions 
+
+
+      //this.state.params - open string
+    //this.state.params.triggerpontsByUserId - nothing
+    //this.state - error null 
+    //this.triggerpointsByUserId - undefined 
