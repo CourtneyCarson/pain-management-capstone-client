@@ -5,13 +5,18 @@ import config from '../config'
 import TokenService from '../services/token-service'
 
 class PastTreatments extends Component {
-  state = {
-    notes: [],
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      error: null,
+      triggerpointsByUserId: []
+
+    }
+  }
 
   componentDidMount() {
     console.log(TokenService.getAuthToken())
-    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`;
+    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`
 
     fetch(URL, {
       headers: {
@@ -21,16 +26,24 @@ class PastTreatments extends Component {
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
-        // this.setState({
-        //   notes: data,
-        // });
+        this.setState({
+          triggerpointsByUserId: data,
+        });
       })
       .catch((error) => console.log(error));
   }
 
 
   render() {
-    console.log(this.state.notes)
+    //this.state.params - open string
+    //this.state.params.triggerpontsByUserId - nothing
+    //this.state - error null 
+    //this.triggerpointsByUserId - undefined 
+    console.log(this.state.triggerpointsByUserId)
+
+
+    // map through tpUserId - 
+
     // set up state 
     // component did mount fetch req from get endpoint, set state res body 
     // this.state.notes - map over - generate on clicks while mapping 
@@ -50,8 +63,18 @@ class PastTreatments extends Component {
               <h2>Past Trigger Points</h2>
             </div>
 
+
+            <div>
+              {this.state.triggerpointsByUserId.map(tpByUser => {
+                return <li>{tpByUser.title}
+                  {tpByUser.content}
+                  <img src={tpByUser.image} />
+                </li>
+              })}
+            </div>
+
             <ul id="myUL">
-              <li>Trigger Point</li>
+              <li>l</li>
               <button >Add Notes</button>
               <button >Delete</button>
               <li className="checked">Trigger Point</li>
