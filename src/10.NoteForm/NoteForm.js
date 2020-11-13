@@ -61,6 +61,7 @@ class NoteForm extends Component {
             required
           />
           <button className="button">Submit</button>
+         
         </form>
       </section>
     )

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import AuthApiService from '../services/auth-api-service'
 import './LogIn'
-
+import TokenService from '../services/token-service'
 
 class LogIn extends Component {
   constructor(props) {
@@ -24,12 +24,14 @@ class LogIn extends Component {
     const { loginUsername, loginPassword } = event.target
 
     AuthApiService.postLogin({
-      userName: loginUsername.value,
+      email: loginUsername.value,
       password: loginPassword.value,
 
     })
-      
+
       .then(response => {
+        TokenService.saveAuthToken(response.authToken)
+        TokenService.saveUserId(response.userId)
         loginUsername.value = ""
         loginPassword.value = ""
         window.location = '/home'
@@ -58,7 +60,7 @@ class LogIn extends Component {
     return outputLoginPassword
   }
 
-  
+
 
 
 

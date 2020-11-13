@@ -1,10 +1,36 @@
 import React, {Component} from 'react'
 import './PastTreatments'
 import NoteForm from '../10.NoteForm/NoteForm'
+import config from '../config'
 
 class PastTreatments extends Component {
+  state = {
+    notes: [],
+  };
+
+  componentDidMount() {
+
+    let getCollectionByUserId = `${config.API_ENDPOINT}/notes`;
+
+    fetch(getCollectionByUserId)
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          notes: data,
+        });
+      })
+      .catch((error) => console.log(error));
+  }
+
+
   render() {
-    
+    console.log(this.state.notes)
+// set up state 
+    // component did mount fetch req from get endpoint, set state res body 
+    // this.state.notes - map over - generate on clicks while mapping 
+    //onClick = {() => this.props.updateAddNotes(note.id)
+  //}
+    // onclick for button actions 
     return (
     
       <div className="past-treatments-page">
@@ -20,8 +46,8 @@ class PastTreatments extends Component {
 
             <ul id="myUL">
               <li>Trigger Point</li>
-              <button type='submit'>Add Notes</button>
-              <button type='submit'>Delete</button>
+              <button >Add Notes</button>
+              <button >Delete</button>
               <li className="checked">Trigger Point</li>
               <button type='submit'>Add Notes</button>
               <button type='submit'>Delete</button>
