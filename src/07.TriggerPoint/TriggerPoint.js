@@ -21,7 +21,7 @@ class TriggerPoint extends Component {
     console.log(triggerpointId.value)
     let currentUserId = TokenService.getUserId()
     console.log(currentUserId)
-     this.postTriggerPoint(triggerpointId.value)
+    this.postTriggerPoint(triggerpointId.value)
   }
 
   componentDidMount() {
@@ -46,7 +46,7 @@ class TriggerPoint extends Component {
   }
 
   // post req - to save trigger point to users account 
-  postTriggerPoint( trigger_points_id) {
+  postTriggerPoint(trigger_points_id) {
     let id = this.props.match.params.id
     let URL = `${config.API_ENDPOINT}/tpusers`
 

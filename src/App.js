@@ -11,6 +11,7 @@ import TriggerPoint from './07.TriggerPoint/TriggerPoint';
 import PastTreatments from './08.PastTreatments/PastTreatments';
 import NavBar from './09.NavBar/NavBar'
 import Error from './Error'
+import NoteForm from './10.NoteForm/NoteForm';
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path="/trigger-point/:id" component={TriggerPoint} />
             <Route path="/past-treatments" component={PastTreatments} />
             <Route path="/log-out" component={LandingPage} />
+            <Route path="/note-form" component={NoteForm}/>
             <Route component={Error} />
           </Switch>
         </BrowserRouter>

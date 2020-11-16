@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './PastTreatments'
 import NoteForm from '../10.NoteForm/NoteForm'
 import config from '../config'
@@ -59,7 +60,11 @@ class PastTreatments extends Component {
                     <h3>{tpByUser.title}</h3>
                     <img src={tpByUser.image} alt="trigger point" />
                     <p>{tpByUser.content}</p>
-                    <button >Add Notes</button>
+
+                    <Link to="/note-form">
+                      <button >Add Notes</button>
+                    </Link>
+
                     <button >Delete</button>
                   </li>
                 </ul>
@@ -67,7 +72,7 @@ class PastTreatments extends Component {
             })}
           </div>
 
-          <NoteForm />
+
         </section>
 
 
