@@ -79,7 +79,7 @@ Register Page
         * __Home.js__ (stateful) - trigger-point table (user_id, image,   title, content, date-created)
         * __About.js__ (stateless) -
         * __HowTo.js__ (stateless) -
-        * __TriggerPoint.js__ (stateful) - trigger-point table (user_id, image, title, content, date-created)
+        * __TriggerPoint.js__ (stateful) - trigger-points-user table (user_id, image, title, content, date-created)
         * __PastTreatments.js__ (stateful) - notes table (trigger_point_id, title, content, date-created)
         * __Navbar.js__ (stateful) - user table
         
@@ -93,11 +93,15 @@ Register Page
 
 *  (Trigger Points) Results (database table)
     * id (auto-generated)
-    * user_id (foreign-key to match users table (id))
     * image (image)
     * title (note title)
     * content (note text)
     * date-created (auto generated)
+
+*  trigger_points_user (database table)
+    * id (auto-generated)
+    * user_id (foreign key to match users (id))
+    * trigger_points_id (foreign key to match trigger_points (id))
 
 *  Notes (database table)
     * id (auto-generated)
@@ -107,6 +111,7 @@ Register Page
     * date-created (auto generated)
 
 
+    
 
 
 

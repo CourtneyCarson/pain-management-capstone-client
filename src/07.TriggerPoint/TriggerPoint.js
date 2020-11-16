@@ -55,8 +55,18 @@ class TriggerPoint extends Component {
               </header>
             </section>
             <section>
+              {/* {this.state.params.triggerpointId.map(tpId => {
+                return (
+                  <ul>
+                    <p>{tpId.title}</p>
+                   </ul>
+                 )
+               })} */}
+
+
+
               <img src="https://loremflickr.com/750/300/landscape?random={id}" />
-              <p> Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi.
+              <p> {id.content}Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi.
               Franzen fashion axe twee organic. Pinterest taxidermy craft beer tattooed.
               Readymade vice franzen, green juice you probably haven't heard of them bitters
               fixie live-edge semiotics raclette. Distillery meh butcher biodiesel keffiyeh pinterest.
