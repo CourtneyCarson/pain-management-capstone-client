@@ -65,7 +65,7 @@ class TriggerPoint extends Component {
 
 
 
-              <img src="https://loremflickr.com/750/300/landscape?random={id}" />
+              <img src="https://loremflickr.com/750/300/landscape?random={id}" alt="tp" />
               <p> {id.content}Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi.
               Franzen fashion axe twee organic. Pinterest taxidermy craft beer tattooed.
               Readymade vice franzen, green juice you probably haven't heard of them bitters

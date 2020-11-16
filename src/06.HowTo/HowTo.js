@@ -19,14 +19,14 @@ export default function HowTo(props) {
     <section>
       <h5>Start Of Walkthrough:</h5>
       <ul>
-        <img src="example.jpg" alt="trigger point "/>
-          <li>Skateboard shaman helvetica try-hard taxidermy palo santo.</li>
-        <img src="example.jpg" alt="trigger point "/>
-          <li> Plaid cloud bread pabst, pork belly tacos heirloom coloring book retro scenester.</li>
-        <img src="example.jpg" alt="trigger point "/>
-          <li>Vaporware cliche raclette mustache synth.</li>
-        <img src="example.jpg" alt="trigger point "/>
-          <li>Microdosing activated charcoal selvage vegan gastropub, kombucha edison bulb leggings fanny pack chartreuse.</li>
+        <img src="https://live.staticflickr.com/65535/50607295067_e7f5486272_w.jpg" alt="trigger point "/>
+          <li>Supported Knuckles </li>
+        {/* <img src="example.jpg" alt="trigger point "/>
+          <li> Supported Fingers </li> */}
+        <img src="https://live.staticflickr.com/65535/50607179136_764b077fb3_w.jpg"  alt="trigger point "/>
+          <li>Supported Fingers </li>
+        <img src="https://live.staticflickr.com/65535/50607295002_571371bbe2_w.jpg" alt="trigger point "/>
+          <li>Knuckles </li>
           </ul>
   </section>
 </main>

@@ -14,7 +14,7 @@ export default function AboutPage(props) {
           <header>
             <h3>What is a Trigger Point?</h3>
           </header>
-          <img src="example.jpg" alt="trigger point" />
+          <img src="https://live.staticflickr.com/65535/50607295102_041791c53c_w.jpg"  alt="trigger point" />
           <p>Shabby chic drinking vinegar cronut schlitz fingerstache. Post-ironic migas waistcoat crucifix dreamcatcher bushwick pug bitters. Normcore whatever 8-bit scenester fingerstache synth drinking vinegar marfa woke VHS. Seitan lomo single-origin coffee 3 wolf moon messenger bag lo-fi pok pok. Flexitarian kinfolk stumptown cloud bread seitan. Put a bird on it hexagon scenester authentic farm-to-table bushwick mlkshk pop-up try-hard freegan. Helvetica kogi fanny pack single-origin coffee, mumblecore shoreditch squid thundercats stumptown literally.</p>
         </section>
 
