@@ -16,7 +16,7 @@ class PastTreatments extends Component {
   }
 
   componentDidMount() {
-    console.log(TokenService.getAuthToken())
+    // console.log(TokenService.getAuthToken())
     let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`
 
     fetch(URL, {
@@ -54,6 +54,7 @@ class PastTreatments extends Component {
 
           <div>
             {this.state.triggerpointsByUserId.map(tpByUser => {
+              console.log(tpByUser.id)
               return (
                 <ul>
                   <li>
@@ -61,10 +62,9 @@ class PastTreatments extends Component {
                     <img src={tpByUser.image} alt="trigger point" />
                     <p>{tpByUser.content}</p>
 
-                    <Link to="/note-form">
-                      <button >Add Notes</button>
-                    </Link>
+                  
 
+                    <NoteForm tpId={tpByUser.id}/>
                     <button >Delete</button>
                   </li>
                 </ul>

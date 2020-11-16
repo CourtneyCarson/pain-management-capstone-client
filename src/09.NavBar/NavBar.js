@@ -46,7 +46,7 @@ export default class NavBar extends React.Component {
           )
         }} />
 
-        <Route exact path="/trigger-point" render={() => {
+        <Route exact path="/trigger-point/:id" render={() => {
           return (
             <>
               <Link to='/home'>Home</Link>

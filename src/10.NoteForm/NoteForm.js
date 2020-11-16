@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 //import PastTreatments from '../08.PastTreatments/PastTreatments'
 import config from '../config'
 import { render } from 'react-dom'
+import TokenService from '../services/token-service'
+
 
 class NoteForm extends Component {
   constructor(props) {
@@ -14,10 +16,11 @@ class NoteForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-
+    console.log(this.props.tpId)
     const note = {
       title: this.state.title,
       content: this.state.content,
+      trigger_point_id: this.props.tpId,
     }
 
     fetch(`${config.API_ENDPOINT}/notes`,
@@ -26,6 +29,7 @@ class NoteForm extends Component {
         body: JSON.stringify(note),
         headers: {
           'content-type': 'application/json',
+          'authorization': `bearer ${TokenService.getAuthToken()}`,
         },
       })
       .then((res) => {
@@ -37,8 +41,8 @@ class NoteForm extends Component {
         return res.json()
       })
       .then((note) => {
-        this.props.onAddNote(note)
-        window.location = '/past-treatments'
+        // this.props.onAddNote(note)
+        // window.location = '/past-treatments'
       })
       .catch((error) => {
         console.log({ error })
@@ -50,6 +54,7 @@ class NoteForm extends Component {
       <section className="add-notes">
         <h4 className="add-notes-title">Add Notes</h4>
         <form className="add-notes-form" onSubmit={this.handleSubmit}>
+
           <input
             type="text"
             className="input"
@@ -57,11 +62,11 @@ class NoteForm extends Component {
             value={this.state.content}
             name="note"
             id="note"
-            onChange={(event) => this.setState({ note: event.target.value })}
+            onChange={(event) => this.setState({ content: event.target.value })}
             required
           />
           <button className="button">Submit</button>
-         
+
         </form>
       </section>
     )
