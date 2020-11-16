@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import './TriggerPoint'
 import { Link } from 'react-router-dom'
 import TokenService from '../services/token-service'
-
+import config from '../config'
 
 class TriggerPoint extends Component {
   constructor(props) {
     super(props)
     this.state = {
       error: null,
-      params: {
-        triggerpointId: "",
-      },
+      triggerpointId: "",
+      TriggerPoint: {},
     }
   }
 
@@ -22,29 +21,38 @@ class TriggerPoint extends Component {
     console.log(triggerpointId.value)
     let currentUserId = TokenService.getUserId()
     console.log(currentUserId)
-    // AuthApiService.postUser({
-    //   email: registerUsername.value,
-    //   password: registerPassword.value,
-    // })
 
-    //   .then(response => {
-    //     registerUsername.value = ''
-    //     registerPassword.value = ''
-    //     window.location = '/home'
-    //   })
-    //   .catch(res => {
-    //     this.setState({ error: res.error })
-    //   })
+  }
+
+  componentDidMount() {
+    console.log(TokenService.getAuthToken())
+    let id = this.props.match.params.id
+    
+    let URL = `${config.API_ENDPOINT}/tp/${id}`
+
+
+    fetch(URL, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        this.setState({
+          TriggerPoint: data,
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
 
 
   render() {
-
-    let id = this.props.match.params.id
+console.log(this.state.TriggerPoint)
+let id = this.props.match.params.id
 
     return (
-
       <div className="trigger-point-page">
 
         <main role="main">
@@ -55,23 +63,11 @@ class TriggerPoint extends Component {
               </header>
             </section>
             <section>
-              {/* {this.state.params.triggerpointId.map(tpId => {
-                return (
-                  <ul>
-                    <p>{tpId.title}</p>
-                   </ul>
-                 )
-               })} */}
 
 
-
-              <img src="https://loremflickr.com/750/300/landscape?random={id}" alt="tp" />
-              <p> {id.content}Sriracha coloring book irony, waistcoat leggings thundercats synth banh mi.
-              Franzen fashion axe twee organic. Pinterest taxidermy craft beer tattooed.
-              Readymade vice franzen, green juice you probably haven't heard of them bitters
-              fixie live-edge semiotics raclette. Distillery meh butcher biodiesel keffiyeh pinterest.
-              Intelligentsia irony roof party lumbersexual kickstarter blue bottle. Lo-fi wolf actually 8-bit,
-              +1 meh seitan literally cronut mlkshk flannel occupy tofu post-ironic VHS. </p>
+              <img src={this.state.TriggerPoint.image} alt="tp" />
+              <h5>{this.state.TriggerPoint.title}</h5>
+              <p> {this.state.TriggerPoint.content} </p>
               <a href="/how-to">How To Page</a>
             </section>
             <input type='hidden' name='triggerpointId' defaultValue={id}></input>

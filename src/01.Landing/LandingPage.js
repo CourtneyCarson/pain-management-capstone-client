@@ -11,7 +11,7 @@ export default function LandingPage(props) {
             <h3>Get to the root of your pain</h3>
             <img src="https://live.staticflickr.com/65535/50607295132_baa7e594a2_w.jpg" alt="SubOccipital" />
           </header>
-         
+
           <p>
             I'm baby beard health goth cray, readymade dreamcatcher meggings wolf gluten-free aesthetic
             wayfarers la croix. Street art live-edge dreamcatcher, asymmetrical twee gochujang franzen DIY.
@@ -22,12 +22,10 @@ export default function LandingPage(props) {
             rights green juice hexagon tacos normcore umami pinterest shabby chic. Keytar franzen kombucha master
             cleanse cold-pressed plaid succulents adaptogen keffiyeh church-key.
           </p>
-          <button type='submit'>Register</button>
-          <button type='submit'>Log In</button>
         </section>
 
       </main>
-  
+
     </div>
 
   )
