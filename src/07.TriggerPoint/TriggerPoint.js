@@ -21,15 +21,14 @@ class TriggerPoint extends Component {
     console.log(triggerpointId.value)
     let currentUserId = TokenService.getUserId()
     console.log(currentUserId)
-
+     this.postTriggerPoint(triggerpointId.value)
   }
 
   componentDidMount() {
     console.log(TokenService.getAuthToken())
     let id = this.props.match.params.id
-    
-    let URL = `${config.API_ENDPOINT}/tp/${id}`
 
+    let URL = `${config.API_ENDPOINT}/tp/${id}`
 
     fetch(URL, {
       headers: {
@@ -46,11 +45,32 @@ class TriggerPoint extends Component {
       .catch((error) => console.log(error));
   }
 
+  // post req - to save trigger point to users account 
+  postTriggerPoint( trigger_points_id) {
+    let id = this.props.match.params.id
+    let URL = `${config.API_ENDPOINT}/tpusers`
+
+    return fetch(URL, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        trigger_points_id,
+      }),
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  }
 
 
   render() {
-console.log(this.state.TriggerPoint)
-let id = this.props.match.params.id
+    console.log(this.state.TriggerPoint)
+    let id = this.props.match.params.id
 
     return (
       <div className="trigger-point-page">
