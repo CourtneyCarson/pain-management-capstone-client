@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import PastTreatments from '../08.PastTreatments/PastTreatments'
 import config from '../config'
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import TokenService from '../services/token-service'
 
 
@@ -23,7 +23,7 @@ class NoteForm extends Component {
       trigger_point_id: this.props.tpId,
     }
 
-    fetch(`${config.API_ENDPOINT}/notes`,
+    fetch(`${config.API_ENDPOINT}/notes/${note.trigger_point_id}`,
       {
         method: 'POST',
         body: JSON.stringify(note),
@@ -33,6 +33,7 @@ class NoteForm extends Component {
         },
       })
       .then((res) => {
+        console.log(note)
         if (!res.ok) {
           return res.json().then((error) => {
             throw error
@@ -41,6 +42,7 @@ class NoteForm extends Component {
         return res.json()
       })
       .then((note) => {
+        
         // this.props.onAddNote(note)
         // window.location = '/past-treatments'
       })

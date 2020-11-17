@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import './PastTreatments'
 import NoteForm from '../10.NoteForm/NoteForm'
 import config from '../config'
@@ -10,8 +9,8 @@ class PastTreatments extends Component {
     super(props)
     this.state = {
       error: null,
-      triggerpointsByUserId: []
-
+      triggerpointsByUserId: [],
+      Notes: []
     }
   }
 
@@ -32,6 +31,24 @@ class PastTreatments extends Component {
         });
       })
       .catch((error) => console.log(error));
+
+
+    URL = `${config.API_ENDPOINT}/notes`
+
+    fetch(URL, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        this.setState({
+          Notes: data,
+        });
+      })
+      .catch((error) => console.log(error));
+
   }
 
 
@@ -54,6 +71,9 @@ class PastTreatments extends Component {
 
           <div>
             {this.state.triggerpointsByUserId.map(tpByUser => {
+              let Notes = this.state.Notes.filter(Note => {
+                return Note.trigger_point_id == tpByUser.id
+              })
               console.log(tpByUser.id)
               return (
                 <ul>
@@ -61,10 +81,16 @@ class PastTreatments extends Component {
                     <h3>{tpByUser.title}</h3>
                     <img src={tpByUser.image} alt="trigger point" />
                     <p>{tpByUser.content}</p>
+                    <div>{Notes.map(note => {
+                      return (
+                        <div>
+                          <p>{note.title}</p>
+                          <p>{note.content}</p>
+                        </div>
+                      )
+                    })}</div>
 
-                  
-
-                    <NoteForm tpId={tpByUser.id}/>
+                    <NoteForm tpId={tpByUser.id} />
                     <button >Delete</button>
                   </li>
                 </ul>
