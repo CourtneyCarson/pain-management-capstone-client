@@ -67,6 +67,16 @@ class NoteForm extends Component {
             onChange={(event) => this.setState({ content: event.target.value })}
             required
           />
+           <input
+            type="text"
+            className="input"
+            placeholder="write title"
+            value={this.state.title}
+            name="title"
+            id="title"
+            onChange={(event) => this.setState({ title: event.target.value })}
+            required
+          />
           <button className="button">Submit</button>
 
         </form>

@@ -1,13 +1,18 @@
+/* global css - leave in like body, links and stuff i want 
+that are universal  */
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* keeps so doesn't add extra when adding margins/borders etc.  */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans",
-  sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 20px;
   color: #444;
-  text-align: center;
+  text-align: right;
   line-height: 1.5;
 }
 
@@ -15,27 +20,24 @@ a {
   color: black;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background-color: lightgray;
-}
-
-nav,
-footer {
-  padding: 1% 0;
-  background-color: lightgray;
-
-}
-
 header {
   padding: 45px 15px;
 }
 
-section {
+.nav-bar {
+background: salmon;
+}
+
+.home-page {
+  background: lightblue;
+}
+
+.App {
+border: 5px solid green;
+display: flex;
+}
+
+/* section {
   min-height: 200px;
   padding: 30px 15px;
 }
@@ -47,4 +49,4 @@ p {
 
 p + p {
   margin-top: 15px;
-}
+}  */

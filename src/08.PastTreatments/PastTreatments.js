@@ -32,7 +32,7 @@ class PastTreatments extends Component {
       })
       .catch((error) => console.log(error));
 
-
+    /// get all notes by tp id
     URL = `${config.API_ENDPOINT}/notes`
 
     fetch(URL, {
@@ -48,8 +48,39 @@ class PastTreatments extends Component {
         });
       })
       .catch((error) => console.log(error));
-
   }
+
+  ///// Delete Notes 
+  // handleClickDelete = (id) => {
+
+  //   fetch(`${config.API_ENDPOINT}/notes/${id}`,
+  //     {
+  //       method: 'DELETE',
+  //       headers: { 'content-type': 'application/json' },
+  //     })
+  //     .then(response => {
+  //       if (!response.ok)
+  //         return response.json().then(e => Promise.reject(e))
+  //     })
+  //     .then((id) => {
+  //       window.location = '/past-treatments'
+  //       this.setState({
+  //         Notes: [
+  //           ...this.state.notes,
+  //           note
+  //         ]
+  //       })
+  //     })
+  //     .catch(error => {
+  //       console.error({ error })
+  //     })
+  // }
+
+
+
+
+
+
 
 
   render() {
@@ -81,17 +112,26 @@ class PastTreatments extends Component {
                     <h3>{tpByUser.title}</h3>
                     <img src={tpByUser.image} alt="trigger point" />
                     <p>{tpByUser.content}</p>
-                    <div>{Notes.map(note => {
-                      return (
-                        <div>
-                          <p>{note.title}</p>
-                          <p>{note.content}</p>
-                        </div>
-                      )
-                    })}</div>
+                    <div>
+                      {Notes.map(note => {
+                        return (
+                          <div>
+                            <p>{note.title}</p>
+                            <p>{note.content}</p>
+                          </div>
+                        )
+                      })}
+                    </div>
 
                     <NoteForm tpId={tpByUser.id} />
-                    <button >Delete</button>
+                    {/* <button
+                      // className='delete'
+                      // type='button'
+                      // name='completed'
+                    // onClick={(event, id) => this.handleClickDelete(note.id)}
+                    >
+                      Delete
+                    </button> */}
                   </li>
                 </ul>
               )

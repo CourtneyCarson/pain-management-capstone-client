@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import AuthApiService from '../services/auth-api-service'
-import './LogIn'
+import './LogIn.css'
 import TokenService from '../services/token-service'
 
 class LogIn extends Component {
@@ -87,8 +87,8 @@ class LogIn extends Component {
 
               <label htmlFor="password">Password</label>
               <input
-                className="login-input"
-                type="password"
+                className='login-input'
+                type='password'
                 name='loginPassword'
                 placeholder='password'
                 required

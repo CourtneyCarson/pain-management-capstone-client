@@ -13,14 +13,9 @@ export default function LandingPage(props) {
           </header>
 
           <p>
-            I'm baby beard health goth cray, readymade dreamcatcher meggings wolf gluten-free aesthetic
-            wayfarers la croix. Street art live-edge dreamcatcher, asymmetrical twee gochujang franzen DIY.
-            Celiac shaman ethical jean shorts, fanny pack you probably haven't heard of them lomo disrupt
-            everyday carry kickstarter stumptown 8-bit. Jean shorts hell of trust fund flannel glossier ethical.
-            Yuccie raclette banjo poutine, forage hella food truck vape small batch migas lomo williamsburg
-            fam bicycle rights chicharrones. Af before they sold out fingerstache blue bottle pug, echo park bicycle
-            rights green juice hexagon tacos normcore umami pinterest shabby chic. Keytar franzen kombucha master
-            cleanse cold-pressed plaid succulents adaptogen keffiyeh church-key.
+            This is a troubleshooting application for you to seek out a solution for your pain.
+            Log in to learn more about Trigger Points and how to treat them. 
+          
           </p>
         </section>
 
