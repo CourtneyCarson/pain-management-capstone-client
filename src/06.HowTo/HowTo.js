@@ -25,7 +25,7 @@ export default function HowTo(props) {
           <li> Supported Fingers </li> */}
         <img src="https://live.staticflickr.com/65535/50607179136_764b077fb3_w.jpg"  alt="trigger point "/>
           <li>Supported Fingers </li>
-        <img src="https://live.staticflickr.com/65535/50607295002_571371bbe2_w.jpg" alt="trigger point "/>
+        <img src="https://live.staticflickr.com/65535/50607295002_0963a81851_w.jpg" alt="trigger point "/>
           <li>Knuckles </li>
           </ul>
   </section>

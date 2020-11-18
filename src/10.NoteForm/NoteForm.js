@@ -42,7 +42,7 @@ class NoteForm extends Component {
         return res.json()
       })
       .then((note) => {
-        
+
         // this.props.onAddNote(note)
         // window.location = '/past-treatments'
       })
@@ -67,7 +67,7 @@ class NoteForm extends Component {
             onChange={(event) => this.setState({ content: event.target.value })}
             required
           />
-           <input
+          <input
             type="text"
             className="input"
             placeholder="write title"

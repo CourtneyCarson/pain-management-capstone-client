@@ -13,5 +13,6 @@
 
 .nav-bar {
   width: 200px;
-  background-color: #111
+  background-color: #111;
+  height: 100%;
 }

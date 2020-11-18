@@ -73,14 +73,14 @@ class LogIn extends Component {
           <h1 className='login-title'>Trigger Point Troubleshooter</h1>
           <h3 className="subtitle">Log In</h3>
           <div className="form-div">
-            <form className='signup-form' onSubmit={this.handleSubmit}>
+            <form className='login-form' onSubmit={this.handleSubmit}>
               {errorMessage}
 
-              <label htmlFor="username">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 className="login-input"
                 type="text"
-                name='loginUsername'
+                name='loginEmail'
                 placeholder='email@email.com'
                 required
               />
@@ -93,11 +93,12 @@ class LogIn extends Component {
                 placeholder='password'
                 required
               />
-
-              <button type='submit' className="login-button">
+            </form>
+            <div>
+              <button className='login-button' type='submit'>
                 Log In
                 </button>
-            </form>
+            </div>
             <div className="link-register-div">
               <p> No Account? </p>
               <Link to="sign-up" className="register-link">Sign Up</Link>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './SignUp'
+import './SignUp.css'
 import AuthApiService from '../services/auth-api-service'
 
 class SignUp extends Component {
@@ -87,11 +87,13 @@ class SignUp extends Component {
                 name="registerPassword"
                 placeholder="password"
                 required />
-              <button type="submit" className="sign-up-button">Register</button>
             </form>
+            <div>
+              <button type="submit" className="sign-up-button">Register</button>
+            </div>
             <div className="link-register-div">
-              <p> Already Have An Account?</p>
-              <Link to="/log-in" className="login-link">Log In</Link>
+              <p> Already Have An Account?
+              <Link to="/log-in" className="login-link">Log In</Link></p>
             </div>
 
           </div>

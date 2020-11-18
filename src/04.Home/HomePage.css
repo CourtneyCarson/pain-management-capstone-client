@@ -1,12 +1,10 @@
- /* .tp-button-link {
-  display: flex;
-  flex-flow: wrap;
+ /* a > img {
+ width: 280px;
+ height: 400px;
+ object-fit: cover;
 }  */
 
-.child {
 
-  border: yellow;
-}
 
 
 

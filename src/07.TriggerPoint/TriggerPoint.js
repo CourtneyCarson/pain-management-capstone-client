@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './TriggerPoint'
+import './TriggerPoint.css'
 import { Link } from 'react-router-dom'
 import TokenService from '../services/token-service'
 import config from '../config'
@@ -76,7 +76,7 @@ class TriggerPoint extends Component {
       <div className="trigger-point-page">
 
         <main role="main">
-          <form className="trigger-point-form" onSubmit={this.handleSubmit}>
+          <div className="trigger-point-div" onSubmit={this.handleSubmit}>
             <section>
               <header>
                 <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
@@ -95,7 +95,7 @@ class TriggerPoint extends Component {
             <Link to="/home">
               Back
           </Link>
-          </form>
+          </div>
         </main>
 
       </div>
