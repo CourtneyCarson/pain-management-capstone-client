@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import LogIn from '../02.LogIn/LogIn';
+import HomePage from '../04.Home/HomePage';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
-      <LogIn />
+      <HomePage />
     </BrowserRouter>
     , div);
   ReactDOM.unmountComponentAtNode(div);

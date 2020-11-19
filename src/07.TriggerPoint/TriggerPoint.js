@@ -69,7 +69,7 @@ class TriggerPoint extends Component {
 
 
   render() {
-    console.log(this.state.TriggerPoint)
+    // console.log(this.state.TriggerPoint)
     let id = this.props.match.params.id
 
     return (
