@@ -148,18 +148,3 @@ class PastTreatments extends Component {
 }
 
 export default PastTreatments
-
-
-
-     // set up state 
-    // component did mount fetch req from get endpoint, set state res body 
-    // this.state.notes - map over - generate on clicks while mapping 
-    //onClick = {() => this.props.updateAddNotes(note.id)
-    //}
-    // onclick for button actions 
-
-
-      //this.state.params - open string
-    //this.state.params.triggerpontsByUserId - nothing
-    //this.state - error null 
-    //this.triggerpointsByUserId - undefined 
