@@ -2,9 +2,11 @@
 .log-in-page {
   margin-top: 48px;
   height: 500px;
+  
 }
 
 .login-form {
   display: inline-flex;
   flex-direction: column;
 }
+

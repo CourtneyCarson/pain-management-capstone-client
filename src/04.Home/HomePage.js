@@ -28,7 +28,7 @@ export default function HomePage(props) {
               alt="referral pattern levator scapulae" />
           </Link>
           <Link to="/trigger-point/4">
-          <img src="https://live.staticflickr.com/65535/50609334608_22029f7b3d_w.jpg"
+            <img src="https://live.staticflickr.com/65535/50609334608_22029f7b3d_w.jpg"
               alt="referral pattern middle trapezius" />
           </Link>
 

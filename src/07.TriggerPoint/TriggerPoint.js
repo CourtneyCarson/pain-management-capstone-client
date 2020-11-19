@@ -76,7 +76,7 @@ class TriggerPoint extends Component {
       <div className="trigger-point-page">
 
         <main role="main">
-          <div className="trigger-point-div" onSubmit={this.handleSubmit}>
+          <form className="trigger-point-div" onSubmit={this.handleSubmit}>
             <section>
               <header>
                 <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
@@ -95,7 +95,7 @@ class TriggerPoint extends Component {
             <Link to="/home">
               Back
           </Link>
-          </div>
+          </form>
         </main>
 
       </div>

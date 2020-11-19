@@ -1,9 +1,10 @@
 
 .nav-link a {
-  color: white;
+  color: palegoldenrod;
   padding: 16px;
   text-decoration: none;
   display: block;
+  /* background: url(.../public/images/background.jpg); */
 } 
 
 .nav-link a:hover {
