@@ -76,11 +76,11 @@ class LogIn extends Component {
             <form className='login-form' onSubmit={this.handleSubmit}>
               {errorMessage}
 
-              <label htmlFor="email">Email</label>
+              <label htmlFor="username">Email</label>
               <input
                 className="login-input"
                 type="text"
-                name='loginEmail'
+                name='loginUsername'
                 placeholder='email@email.com'
                 required
               />
@@ -93,12 +93,12 @@ class LogIn extends Component {
                 placeholder='password'
                 required
               />
-            </form>
-            <div>
+
               <button className='login-button' type='submit'>
                 Log In
-                </button>
-            </div>
+              </button>
+
+            </form>
             <div className="link-register-div">
               <p> No Account? </p>
               <Link to="sign-up" className="register-link">Sign Up</Link>

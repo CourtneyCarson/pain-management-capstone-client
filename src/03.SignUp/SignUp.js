@@ -87,10 +87,10 @@ class SignUp extends Component {
                 name="registerPassword"
                 placeholder="password"
                 required />
-            </form>
-            <div>
+           
               <button type="submit" className="sign-up-button">Register</button>
-            </div>
+            
+              </form>
             <div className="link-register-div">
               <p> Already Have An Account?
               <Link to="/log-in" className="login-link">Log In</Link></p>
