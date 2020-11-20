@@ -15,7 +15,6 @@ class PastTreatments extends Component {
   }
 
   componentDidMount() {
-    // console.log(TokenService.getAuthToken())
     let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`
 
     fetch(URL, {
@@ -50,37 +49,6 @@ class PastTreatments extends Component {
       .catch((error) => console.log(error));
   }
 
-  ///// Delete Notes 
-  // handleClickDelete = (id) => {
-
-  //   fetch(`${config.API_ENDPOINT}/notes/${id}`,
-  //     {
-  //       method: 'DELETE',
-  //       headers: { 'content-type': 'application/json' },
-  //     })
-  //     .then(response => {
-  //       if (!response.ok)
-  //         return response.json().then(e => Promise.reject(e))
-  //     })
-  //     .then((id) => {
-  //       window.location = '/past-treatments'
-  //       this.setState({
-  //         Notes: [
-  //           ...this.state.notes,
-  //           note
-  //         ]
-  //       })
-  //     })
-  //     .catch(error => {
-  //       console.error({ error })
-  //     })
-  // }
-
-
-
-
-
-
 
 
   render() {
@@ -94,9 +62,7 @@ class PastTreatments extends Component {
           <h2>Past Trigger Points</h2>
         </header>
         <section className='past-treatment'>
-          <div className='header'>
-            <h5>Add notes to saved trigger points </h5>
-          </div>
+
 
           <div className='saved-tp'>
             {this.state.triggerpointsByUserId.map(tpByUser => {
@@ -107,15 +73,17 @@ class PastTreatments extends Component {
 
 
               return (
-                <p>
-                  <h3>{tpByUser.title}</h3>
-                  <img src={tpByUser.image} alt="trigger point" />
-                  <p>{tpByUser.content}</p>
-                  <div>
+                <div className='past-tx-box'>
+                  <div className='same'>
+                    <h3>{tpByUser.title}</h3>
+                    <img src={tpByUser.image} alt="trigger point" />
+                    <p>{tpByUser.content}</p>
+                  </div>
+                  <div className='same'>
                     {Notes.map(note => {
                       return (
-                        <div>
-                          <p>{note.title}</p>
+                        <div className='notes-inside'>
+                          <h3>{note.title}</h3>
                           <p>{note.content}</p>
                         </div>
                       )
@@ -124,15 +92,8 @@ class PastTreatments extends Component {
 
                   <NoteForm tpId={tpByUser.id} />
 
-                  {/* <button
-                      // className='delete'
-                      // type='button'
-                      // name='completed'
-                    // onClick={(event, id) => this.handleClickDelete(note.id)}
-                    >
-                      Delete
-                    </button> */}
-                </p>
+
+                </div>
 
               )
             })}

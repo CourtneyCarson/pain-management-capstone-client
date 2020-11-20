@@ -71,8 +71,8 @@ class LogIn extends Component {
     return (
       <section className="login-component">
         <div className="log-in-page">
-          <h1 className='login-title'>Trigger Point Troubleshooter</h1>
-          <h3 className="subtitle">Log In</h3>
+          <h1>Trigger Point Troubleshooter</h1>
+          <h3>Log In</h3>
           <div className="form-div">
             <form className='login-form' onSubmit={this.handleSubmit}>
               {errorMessage}

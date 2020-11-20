@@ -16,7 +16,23 @@ export default class NavBar extends React.Component {
                 <Link to='/sign-up'>Sign Up</Link>
               </>
             )
+            }} />
+            {/* log in page */}
+            <Route exact path="/log-in" render={() => {
+            return (
+              <>
+                <Link to='/home'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/how-to'>How To</Link>
+                <Link to='/log-out'>Log Out</Link>
+              </>
+            )
           }} />
+
+
+
+
+
           <Route exact path="/home" render={() => {
             return (
               <>

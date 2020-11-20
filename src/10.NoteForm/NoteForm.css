@@ -1,11 +1,68 @@
 .add-notes-form {
-display:flex;
-/* justify-content: center; */
+/* display: inline-flex; */
+display: flex;
+/* justify-content: center;  */
+flex-direction: column;
+align-items: center;
+/* margin-top: 50px; */
+/* margin: 2em; */
 }
 
-/* .input {
-} */
+
+.note-inside, .input-title,
+.input-note, .note-button {
+border: none;
+border-radius: .3em;
+font-size: 1.25em;
+font-family: sans-serif;
+padding: .3em;
+margin: .3em;
+}
+
+.note-inside, .input-title, .input-note {
+  padding: .3em .5em;
+}
+
+.input-note {
+  /* padding: 50px;
+  margin: 2px; */
+  /* border-radius: 25px; */
+  /* border:none;
+font-size: 1.2em; */
+}
+
+.input-title {
+/* padding:5px; */
+/* border-radius: 10px; */
+/* width: 200px; */
+/* border:none;
+font-size: 1.2em; */
+
+}
+
+.note-button {
+   /* width: 50%; */
+  /* margin: 0 auto;
+  text-align: center;
+  border:none;
+  border-radius: .3em;
+  display: inline-block;
+  padding: .3em .6em;
+  background: darkcyan;
+  color: white; */
+  display: inline-block;
+  padding: .3em .6em;
+  background: darkcyan;
+  color: white;
+}
+
+.notes-inside{
+  background: rgba(255,255,255,.2);
+  border-radius: .3rem;
+  padding: .1rem 1rem;
+  margin: .3rem;
+}
 
 
 
-/* i'd like the form to be vertical, the comments to be styled */
+

@@ -3,6 +3,8 @@
   padding: 16px;
   text-decoration: none;
   display: block;
+
+
   /* background: url(.../public/images/background.jpg); */
 } 
 
@@ -13,8 +15,6 @@
 }
 
 .nav-bar {
-  /* flex:1; */
-  /* width: 200px; */
   background-color: #111;
   }
 

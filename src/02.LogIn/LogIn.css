@@ -1,11 +1,18 @@
 
 .log-in-page {
+  display:flex;
+  /* flex-direction:column; */
   margin-top: 48px;
-  height: 500px;
+  /* height: 700px; */
+  /* height: 100%; */
 }
 
 .login-form {
   display: inline-flex;
   flex-direction: column;
+  /* height: 100%; */
 }
 
+.login-component {
+  height: 100vh;
+}

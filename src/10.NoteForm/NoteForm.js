@@ -54,22 +54,12 @@ class NoteForm extends Component {
   render() {
     return (
       <section className='add-notes'>
-        <h4 className='add-notes-title'>Add Notes</h4>
+        {/* <h4 className='add-notes-title'>Add Notes</h4> */}
         <form className='add-notes-form' onSubmit={this.handleSubmit}>
 
-          <input
-            type="text"
-            className='input'
-            placeholder='write notes here'
-            value={this.state.content}
-            name='note'
-            id='note'
-            onChange={(event) => this.setState({ content: event.target.value })}
-            required
-          />
-          <input
+        <input
             type='text' 
-            className='input'
+            className='input-title'
             placeholder='write title'
             value={this.state.title}
             name='title'
@@ -77,7 +67,19 @@ class NoteForm extends Component {
             onChange={(event) => this.setState({ title: event.target.value })}
             required
           />
-          <button className='button'>Submit</button>
+
+          <input
+            type="text"
+            className='input-note'
+            placeholder='write notes here'
+            value={this.state.content}
+            name='note'
+            id='note'
+            onChange={(event) => this.setState({ content: event.target.value })}
+            required
+          />
+        
+          <button className='note-button'>Add Note</button>
 
         </form>
       </section>
