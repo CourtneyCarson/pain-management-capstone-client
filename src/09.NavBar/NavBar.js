@@ -8,7 +8,7 @@ export default class NavBar extends React.Component {
     return (
       <header className='nav-bar'>
         <nav className='nav-link'>
-          {/* <div className='nav-bar'> */}
+          <div className='nav-bar'>
           <Route exact path={['/', '/log-out']} render={() => {
             return (
               <>
@@ -69,7 +69,7 @@ export default class NavBar extends React.Component {
               </>
             )
           }} />
-{/* </div> */}
+</div>
         </nav>
       </header>
     )

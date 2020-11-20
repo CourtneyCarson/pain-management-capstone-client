@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 import AuthApiService from '../services/auth-api-service'
 import './LogIn.css'
 import TokenService from '../services/token-service'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+
 
 class LogIn extends Component {
   constructor(props) {
@@ -97,7 +96,6 @@ class LogIn extends Component {
               />
 
                <button className='login-button' type='submit'>
-              {/* <i class="fas fa-sign-in-alt"></i>  */}
                 Log In
               </button>
             </form>

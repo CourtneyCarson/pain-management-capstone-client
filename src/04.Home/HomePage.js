@@ -42,11 +42,11 @@ export default function HomePage(props) {
             <img src="https://live.staticflickr.com/65535/50609334823_2c272797d4_w.jpg"
               alt="referral pattern glute medius" />
           </Link>
-          {/* <Link to="/trigger-point/7">
-            <img src="https://live.staticflickr.com/65535/50609334823_a1b1177ff0_w.jpg"
+           <Link to="/trigger-point/7">
+            <img src="https://live.staticflickr.com/65535/50622815271_f9ac2d43f5_w.jpg"
               alt="referral pattern glute medius" />
           </Link>
-          <Link to="/trigger-point/8">
+          {/* <Link to="/trigger-point/8">
             <img src="https://live.staticflickr.com/65535/50609334823_a1b1177ff0_w.jpg"
               alt="referral pattern glute medius" />
           </Link> */}

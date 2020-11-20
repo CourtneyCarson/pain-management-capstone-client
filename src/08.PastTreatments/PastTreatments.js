@@ -107,8 +107,8 @@ class PastTreatments extends Component {
               })
               console.log(tpByUser.id)
               return (
-                <ul>
-                  <li>
+                
+                  <p>
                     <h3>{tpByUser.title}</h3>
                     <img src={tpByUser.image} alt="trigger point" />
                     <p>{tpByUser.content}</p>
@@ -132,16 +132,12 @@ class PastTreatments extends Component {
                     >
                       Delete
                     </button> */}
-                  </li>
-                </ul>
+                </p>
+                
               )
             })}
           </div>
-
-
         </section>
-
-
       </div>
     )
   }

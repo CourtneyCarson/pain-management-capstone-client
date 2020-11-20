@@ -4,8 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import TriggerPoint from '../07.TriggerPoint/TriggerPoint'
 
 
-const match = {params: {id: 1}}
-
+const match = { params: { id: 1 } }
 
 it('renders without crashing', () => {
 
