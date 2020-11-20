@@ -1,0 +1,13 @@
+.about-page-section {
+display:flex;
+}
+
+.about-paragraph {
+  flex-direction: column;
+}
+
+/* @media screen and (min-width:800px){
+  .about-page{
+    display:flex;
+    }
+} */

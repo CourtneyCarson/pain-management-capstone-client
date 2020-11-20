@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './PastTreatments'
+import './PastTreatments.css'
 import NoteForm from '../10.NoteForm/NoteForm'
 import config from '../config'
 import TokenService from '../services/token-service'
@@ -90,23 +90,23 @@ class PastTreatments extends Component {
 
       <div className="past-treatments-page">
 
-
         <header className="banner">
           <h2>Past Trigger Points</h2>
         </header>
-        <section>
-          <div id="myDIV" className="header">
+        <section className='past-treatment'>
+          <div className='header'>
             <h5>Add notes to saved trigger points </h5>
           </div>
 
-          <div>
+          <div className='saved-tp'>
             {this.state.triggerpointsByUserId.map(tpByUser => {
               let Notes = this.state.Notes.filter(Note => {
                 return Note.trigger_point_id == tpByUser.id
               })
               console.log(tpByUser.id)
-              return (
 
+
+              return (
                 <p>
                   <h3>{tpByUser.title}</h3>
                   <img src={tpByUser.image} alt="trigger point" />

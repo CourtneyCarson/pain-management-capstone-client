@@ -1,5 +1,4 @@
-
-.paragraph {
+.how-to-paragraph{
   padding: 50px;
   }
 
@@ -9,23 +8,3 @@
     display:flex;
     }
 }
-
-
-
-
-/* .how-to-page div:nth-child(2){
-  flex-direction: column;
-  flex:1 0 100%;  
-} 
-
-.how-to-page div:nth-child(3) {
-  flex-direction: column;
-  flex: 3 0 auto;
-}
-
-.how-to-page div:nth-child(4) {
-  flex-direction: column;
-  flex: 2 0 auto;
-  border: black;
-} */ 
-

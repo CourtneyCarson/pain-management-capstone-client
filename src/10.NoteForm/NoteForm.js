@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import config from '../config'
 // import { render } from 'react-dom'
 import TokenService from '../services/token-service'
+import './NoteForm.css'
 
 
 class NoteForm extends Component {
@@ -44,8 +45,6 @@ class NoteForm extends Component {
       })
       .then((note) => {
 
-        // this.props.onAddNote(note)
-        // window.location = '/past-treatments'
       })
       .catch((error) => {
         console.log({ error })
@@ -54,31 +53,31 @@ class NoteForm extends Component {
 
   render() {
     return (
-      <section className="add-notes">
-        <h4 className="add-notes-title">Add Notes</h4>
-        <form className="add-notes-form" onSubmit={this.handleSubmit}>
+      <section className='add-notes'>
+        <h4 className='add-notes-title'>Add Notes</h4>
+        <form className='add-notes-form' onSubmit={this.handleSubmit}>
 
           <input
             type="text"
-            className="input"
-            placeholder="write notes here"
+            className='input'
+            placeholder='write notes here'
             value={this.state.content}
-            name="note"
-            id="note"
+            name='note'
+            id='note'
             onChange={(event) => this.setState({ content: event.target.value })}
             required
           />
           <input
-            type="text"
-            className="input"
-            placeholder="write title"
+            type='text' 
+            className='input'
+            placeholder='write title'
             value={this.state.title}
-            name="title"
-            id="title"
+            name='title'
+            id='title'
             onChange={(event) => this.setState({ title: event.target.value })}
             required
           />
-          <button className="button">Submit</button>
+          <button className='button'>Submit</button>
 
         </form>
       </section>

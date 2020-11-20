@@ -4,13 +4,13 @@ import './HowTo.css'
 export default function HowTo(props) {
   return (
 
-    <div className="how-to-page">
+    <div className='how-to-page'>
 
-      <header className="banner">
+      <header className='banner'>
         <h1>Techniques To Treat Trigger Points</h1>
       </header>
       <section className='how-to-section'>
-        <div className='paragraph'>
+        <div className='how-to-paragraph'>
         <p> When you find a trigger point you will feel the pain ignite in the referral area, when the trigger point
         releases the pain will subside. As you work you should feel the pain gradually subsiding, and the trigger point
         softening. Use deep pressure, but aim for a pain level of 5 out of 10. Often trigger point pain will subside
@@ -19,7 +19,7 @@ export default function HowTo(props) {
 
         
 
-        <div className='paragraph'>
+        <div className='how-to-paragraph'>
         <p> There are 2 schools of thought on how to treat trigger points</p>
         <h3> Press and Hold</h3>
         <p> Using deep pressure, press and hold a trigger point until you feel the pain begin to subside.
@@ -30,7 +30,7 @@ export default function HowTo(props) {
         </p>
         </div>
 
-        <div className='paragraph'>
+        <div className='how-to-paragraph'>
         <h3> Slow Movement Over Muscle Fibers </h3>
         <p>Using deep pressure, massage over each trigger point 10-12 times moving in one direction.
           By moving over the trigger point repeatedly you are moving blood and lymph fluid through the

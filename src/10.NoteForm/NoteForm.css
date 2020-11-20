@@ -1,13 +1,10 @@
-.add-notes {
-  margin-top: 48px;
-  height: 500px;
-  
+.add-notes-form {
+display:flex;
+/* justify-content: center; */
 }
 
-.input {
-  display: inline-flex;
-  flex-direction: column;
-}
+/* .input {
+} */
 
 
 
