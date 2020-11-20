@@ -92,13 +92,12 @@ class PastTreatments extends Component {
 
 
         <header className="banner">
-          <h1>Trigger Point Troubleshooter</h1>
+          <h2>Past Trigger Points</h2>
         </header>
         <section>
           <div id="myDIV" className="header">
-            <h2>Past Trigger Points</h2>
+            <h5>Add notes to saved trigger points </h5>
           </div>
-
 
           <div>
             {this.state.triggerpointsByUserId.map(tpByUser => {

@@ -3,6 +3,7 @@ import './TriggerPoint.css'
 import { Link } from 'react-router-dom'
 import TokenService from '../services/token-service'
 import config from '../config'
+import HomePage from '../04.Home/HomePage'
 
 class TriggerPoint extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class TriggerPoint extends Component {
     let currentUserId = TokenService.getUserId()
     console.log(currentUserId)
     this.postTriggerPoint(triggerpointId.value)
+    this.props.history.push('/past-treatments')
   }
 
   componentDidMount() {
@@ -75,28 +77,27 @@ class TriggerPoint extends Component {
     return (
       <div className="trigger-point-page">
 
-        <main role="main">
-          <form className="trigger-point-div" onSubmit={this.handleSubmit}>
-            <section>
-              <header>
-                <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
-              </header>
-            </section>
-            <section>
+        <form className="trigger-point-div" onSubmit={this.handleSubmit}>
+          <section>
+            <header>
+              <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
+            </header>
+          </section>
+          <section>
 
 
-              <img src={this.state.TriggerPoint.image} alt="tp" />
-              <h5>{this.state.TriggerPoint.title}</h5>
-              <p> {this.state.TriggerPoint.content} </p>
-              <a href="/how-to">How To Page</a>
-            </section>
-            <input type='hidden' name='triggerpointId' defaultValue={id}></input>
-            <button type='submit'>Save</button>
-            <Link to="/home">
-              Back
+            <img src={this.state.TriggerPoint.image} alt="tp" />
+            <h5>{this.state.TriggerPoint.title}</h5>
+            <p> {this.state.TriggerPoint.content} </p>
+            <a href="/how-to">How To Page</a>
+          </section>
+          <input type='hidden' name='triggerpointId' defaultValue={id}></input>
+          <button type='submit'>Save</button>
+          <Link to="/home">
+            Back
           </Link>
-          </form>
-        </main>
+        </form>
+
 
       </div>
     )

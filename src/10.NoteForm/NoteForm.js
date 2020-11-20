@@ -15,13 +15,14 @@ class NoteForm extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
     console.log(this.props.tpId)
     const note = {
       title: this.state.title,
       content: this.state.content,
       trigger_point_id: this.props.tpId,
     }
+
+
 
     fetch(`${config.API_ENDPOINT}/notes/${note.trigger_point_id}`,
       {
