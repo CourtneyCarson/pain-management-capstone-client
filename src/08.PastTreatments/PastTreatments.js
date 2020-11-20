@@ -106,24 +106,25 @@ class PastTreatments extends Component {
               })
               console.log(tpByUser.id)
               return (
-                
-                  <p>
-                    <h3>{tpByUser.title}</h3>
-                    <img src={tpByUser.image} alt="trigger point" />
-                    <p>{tpByUser.content}</p>
-                    <div>
-                      {Notes.map(note => {
-                        return (
-                          <div>
-                            <p>{note.title}</p>
-                            <p>{note.content}</p>
-                          </div>
-                        )
-                      })}
-                    </div>
 
-                    <NoteForm tpId={tpByUser.id} />
-                    {/* <button
+                <p>
+                  <h3>{tpByUser.title}</h3>
+                  <img src={tpByUser.image} alt="trigger point" />
+                  <p>{tpByUser.content}</p>
+                  <div>
+                    {Notes.map(note => {
+                      return (
+                        <div>
+                          <p>{note.title}</p>
+                          <p>{note.content}</p>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  <NoteForm tpId={tpByUser.id} />
+
+                  {/* <button
                       // className='delete'
                       // type='button'
                       // name='completed'
@@ -132,7 +133,7 @@ class PastTreatments extends Component {
                       Delete
                     </button> */}
                 </p>
-                
+
               )
             })}
           </div>

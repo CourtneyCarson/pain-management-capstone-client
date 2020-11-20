@@ -13,10 +13,9 @@
 }
 
 .nav-bar {
-  flex:1;
+  /* flex:1; */
   /* width: 200px; */
   background-color: #111;
-  flex-direction: column-reverse;
   }
 
 

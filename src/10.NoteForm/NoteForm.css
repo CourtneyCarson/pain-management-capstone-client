@@ -1,11 +1,14 @@
-
-.log-in-page {
+.add-notes {
   margin-top: 48px;
   height: 500px;
+  
 }
 
-.login-form {
+.input {
   display: inline-flex;
   flex-direction: column;
 }
 
+
+
+/* i'd like the form to be vertical, the comments to be styled */
