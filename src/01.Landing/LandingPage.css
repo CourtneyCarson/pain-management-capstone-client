@@ -1,10 +1,16 @@
-
-
 .landing-page {
   height: 100vh;
 }
-    
 
+.landing-page-header {
+  padding-top: 2em;
+}
+    
+.landing-page-content {
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
 
 
 
