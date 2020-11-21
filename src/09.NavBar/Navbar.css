@@ -1,21 +1,17 @@
 .nav-link a {
-  color: palegoldenrod;
+  color:white;
   padding: 16px;
   text-decoration: none;
   display: block;
-
-
-  /* background: url(.../public/images/background.jpg); */
 } 
 
 .nav-link a:hover {
-  background-color: #ddd;
+  background: lightcyan;
   color: black;
-  /* box-shadow: 0px 0px 30px white; */
 }
 
 .nav-bar {
-  background-color: #111;
+  background: rgba(11, 143, 163, .8);
   }
 
 
