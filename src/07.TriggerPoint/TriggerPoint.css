@@ -1,8 +1,35 @@
 .trigger-point-page {
-  width: 100%;
+  height: 100vh;
 }
 
+.save-button {
+  border: none;
+  border-radius: .3em;
+  font-size: .9em;
+  font-family: sans-serif;
+  padding: .3em;
+  margin: .3em;
 
-.trigger-point-div {
-  width: 100%;
+
+  display: inline-block;
+  padding: .3em .6em;
+  background: darkcyan;
+  color: white;
+}
+
+@media screen and (min-width:800px){
+  .trigger-point-results {
+  display: flex;
+}
+
+.trigger-point-image-title {
+  flex:1;
+}
+
+.trigger-point-content {
+flex: 1;
+text-align: left;
+padding-right: 2em;
+}
+
 }

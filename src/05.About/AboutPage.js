@@ -35,7 +35,7 @@ export default function AboutPage(props) {
           mumblecore shoreditch squid thundercats stumptown literally.
         </p>
         </div>
-
+        
       </section>
 
 

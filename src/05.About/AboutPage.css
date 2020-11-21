@@ -1,16 +1,26 @@
-.about-page-section {
-display:flex;
-flex-direction: row;
+.about-paragraph {
+  margin-bottom: 2em;
 }
 
-.about-paragraph {
+
+@media screen and (min-width:800px){
+  .about-page-section {
+    display:flex;
+    flex-direction: row;
+    }
+
+
+  .about-paragraph {
   flex: 1;
   text-align: right;
   padding-right: 1em;
+  padding-left: 2em;
 }
 
 .about-paragraph-2 {
   flex: 1;
   text-align: left;
   padding-left: 1em;
+  padding-right: 2em;
+}
 }

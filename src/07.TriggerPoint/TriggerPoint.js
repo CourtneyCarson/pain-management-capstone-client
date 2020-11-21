@@ -83,19 +83,30 @@ class TriggerPoint extends Component {
               <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
             </header>
           </section>
-          <section>
 
-
-            <img src={this.state.TriggerPoint.image} alt="tp" />
-            <h5>{this.state.TriggerPoint.title}</h5>
-            <p> {this.state.TriggerPoint.content} </p>
-            <a href="/how-to">How To Page</a>
+          <section className='trigger-point-results'>
+            <div className='trigger-point-image-title'>
+              <h3>{this.state.TriggerPoint.title}</h3>
+              <img src={this.state.TriggerPoint.image} alt="tp" />
+            </div>
+            
+            <div className='trigger-point-content'>
+              <p> {this.state.TriggerPoint.content}
+                {/* <a href="/how-to"> Learn How To Treat Trigger Points </a> */}
+              </p>
+              
+            </div>
           </section>
-          <input type='hidden' name='triggerpointId' defaultValue={id}></input>
-          <button type='submit'>Save</button>
-          <Link to="/home">
-            Back
-          </Link>
+          
+          <div>
+            <input type='hidden' name='triggerpointId' defaultValue={id}></input>
+            <button className='save-button' type='submit'> Save </button>
+            <Link to="/home">
+              Back
+          </Link><p>
+          <a href="/how-to"> Learn How To Treat Trigger Points </a></p>
+
+          </div>
         </form>
 
 
