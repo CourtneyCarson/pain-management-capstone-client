@@ -101,8 +101,8 @@ class LogIn extends Component {
             </form>
 
             <div className="link-register-div">
-              <p> No Account? </p>
-              <Link to="sign-up" className="register-link">Sign Up</Link>
+              <p> No Account? 
+              <Link to="sign-up" className="register-link">Sign Up</Link></p>
             </div>
           </div>
         </div>

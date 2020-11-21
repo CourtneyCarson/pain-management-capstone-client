@@ -1,12 +1,11 @@
-
 .saved-tp {
-   display:flex; 
-   flex-wrap: wrap;
+  display:flex; 
+  flex-wrap: wrap;
   justify-content: space-evenly; 
-
 }
 
 .past-tx-box {
   flex: 1;
   margin-left: 2em;
 }
+
