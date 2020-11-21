@@ -14,9 +14,7 @@ export default function AboutPage(props) {
       </header>
 
       <section className='about-page-section'>
-        <div className='about-paragraph'>
-        </div>
-
+        
         <div className='about-paragraph'>
           <p>Shabby chic drinking vinegar cronut schlitz fingerstache. Post-ironic
           migas waistcoat crucifix dreamcatcher bushwick pug bitters. Normcore 
@@ -29,7 +27,7 @@ export default function AboutPage(props) {
         </p>
         </div>
 
-        <div className='about-paragraph'>
+        <div className='about-paragraph-2'>
           <p>Seitan lomo single-origin coffee 3 wolf moon messenger bag lo-fi pok
           pok. Flexitarian kinfolk stumptown cloud bread seitan. Put a bird on
           it hexagon scenester authentic farm-to-table bushwick mlkshk pop-up
