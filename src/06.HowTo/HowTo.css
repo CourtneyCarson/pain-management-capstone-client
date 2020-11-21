@@ -1,6 +1,7 @@
 .how-to-paragraph{
   padding: 2em;
   text-align: left;
+  flex: 1;
   }
 
 

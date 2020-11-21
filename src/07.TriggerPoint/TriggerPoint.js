@@ -19,9 +19,9 @@ class TriggerPoint extends Component {
     event.preventDefault()
     const { triggerpointId } = event.target
     this.setState({ error: null })
-    console.log(triggerpointId.value)
+    // console.log(triggerpointId.value)
     let currentUserId = TokenService.getUserId()
-    console.log(currentUserId)
+    // console.log(currentUserId)
     this.postTriggerPoint(triggerpointId.value)
     this.props.history.push('/past-treatments')
   }
@@ -71,7 +71,6 @@ class TriggerPoint extends Component {
 
 
   render() {
-    // console.log(this.state.TriggerPoint)
     let id = this.props.match.params.id
 
     return (
@@ -80,7 +79,7 @@ class TriggerPoint extends Component {
         <form className="trigger-point-div" onSubmit={this.handleSubmit}>
           <section>
             <header>
-              <h3>Your Pain May Be Coming From This Trigger Point:{id}</h3>
+              <h3>Your Pain May Be Coming From This Trigger Point:</h3>
             </header>
           </section>
 
@@ -89,27 +88,26 @@ class TriggerPoint extends Component {
               <h3>{this.state.TriggerPoint.title}</h3>
               <img src={this.state.TriggerPoint.image} alt="tp" />
             </div>
-            
+
             <div className='trigger-point-content'>
               <p> {this.state.TriggerPoint.content}
-                {/* <a href="/how-to"> Learn How To Treat Trigger Points </a> */}
               </p>
-              
+
             </div>
           </section>
-          
+
           <div>
             <input type='hidden' name='triggerpointId' defaultValue={id}></input>
             <button className='save-button' type='submit'> Save </button>
             <Link to="/home">
               Back
-          </Link><p>
-          <a href="/how-to"> Learn How To Treat Trigger Points </a></p>
-
+          </Link>
+            <p>
+              <a href="/how-to"> Learn How To Treat Trigger Points </a>
+            </p>
           </div>
+
         </form>
-
-
       </div>
     )
   }

@@ -62,6 +62,7 @@ export default class NavBar extends React.Component {
               return (
                 <>
                   <Link to='/home'>Home</Link>
+                  <Link to='/about'>About</Link>
                   <Link to='/past-treatments'>Account</Link>
                   <Link to='/log-out'>Log Out</Link>
                 </>
