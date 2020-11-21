@@ -34,6 +34,11 @@
   color: white;
 }
 
+.link-register-div {
+line-height: .5;
+}
+
+
 @media screen and (min-width:800px){
   .log-in-page {
     padding-left: 10em;

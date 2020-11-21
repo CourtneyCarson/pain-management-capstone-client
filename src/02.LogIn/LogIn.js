@@ -82,7 +82,7 @@ class LogIn extends Component {
                 className="login-input"
                 type="text"
                 name='loginUsername'
-                placeholder='email@email.com'
+                placeholder='user@email.com'
                 required
               />
 
@@ -91,19 +91,22 @@ class LogIn extends Component {
                 className='login-input'
                 type='password'
                 name='loginPassword'
-                placeholder='password'
+                placeholder='Password1'
                 required
               />
 
-               <button className='login-button' type='submit'>
+              <button className='login-button' type='submit'>
                 Log In
               </button>
             </form>
 
             <div className="link-register-div">
-              <p> No Account? 
-              <Link to="sign-up" className="register-link">Sign Up</Link></p>
+              <h4> Demo Account: </h4>
+              <p>user@email.com</p>
+              <p>Password1</p>
+              {/* <Link to="sign-up" className="register-link">Sign Up</Link></p> */}
             </div>
+            
           </div>
         </div>
       </section >
