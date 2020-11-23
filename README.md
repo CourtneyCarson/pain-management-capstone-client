@@ -160,8 +160,8 @@ Past Treatments Page
 
 ## Development Roadmap 
 This is v1.0 of the app, but future enhancements are expected to include:
-* delete saved notes functionality
-* edit saved notes functionality
+* Ability to delete saved 
+* Ability to edit saved notes 
 
 ## How to run it 
 Use command line to navigate into the project folder and run the following in terminal
