@@ -136,7 +136,7 @@ Past Treatments Page
 
 
 
-## Screenshots (to do later)
+## Screenshots 
 (Example) Landing Page
 :-------------------------:
 ![Landing Page](/github-images/screenshots/landing.png)
@@ -158,11 +158,12 @@ Past Treatments Page
 
 
 
-## Development Roadmap (to do later)
+## Development Roadmap 
 This is v1.0 of the app, but future enhancements are expected to include:
-* (Example) add more functionality
+* delete saved notes functionality
+* edit saved notes functionality
 
-## How to run it (done)
+## How to run it 
 Use command line to navigate into the project folder and run the following in terminal
 
 ### Local React scripts
