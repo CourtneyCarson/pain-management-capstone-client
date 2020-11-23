@@ -2,8 +2,8 @@
 This will be a troubleshooting application for people to seek out a solution for their pain, by directing them to a trigger point corresponding to their area of pain. There will be a guide on how Trigger Points work, and how to fix them via massage therapy. 
 
 
-## 1. Working Prototype (to do later)
-(Example) You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://your-app-server.herokuapp.com/
+## 1. Working Prototype 
+You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://dry-bastion-25929.herokuapp.com/
 
 
 ## 2. User Stories 
@@ -54,9 +54,12 @@ This app is for two types of users: a visitor and a logged-in user
 
 
 
-## 3. Functionality (to do now)
+## 3. Functionality 
 The app's functionality includes:
-* (Example) Every User has the ability to create an account
+* Every User has the ability to create an account
+* A registered user has the ability to log in to their account
+* A registered user has the ability to save trigger points to their account
+* A registered user has the ability to add notes to their account
 
 ## 4. Technology 
 * Front-End: HTML5, CSS3, JavaScript ES6, React
@@ -64,25 +67,46 @@ The app's functionality includes:
 * Development Environment: Heroku, DBeaver
 
 ### 5. Wireframes
-(Example) Landing Page
+Landing Page
 :-------------------------:
-![Landing Page](/github-images/wireframes/landing-page-wireframe.png)
-Register Page
-![Register Page](/github-images/wireframes/register-page-wireframe.png)
+![Landing Page](/github-images/wireframes/landing.png)
+
+Sign Up Page
+![Sign Up Page](/github-images/wireframes/sign-up.png)
+
+Log In Page
+![Log InPage](/github-images/wireframes/log-in.png)
+
+Home Page
+![Home Page](/github-images/wireframes/home.png)
+
+About Page
+![About Page](/github-images/wireframes/about.png)
+
+How To Page
+![How To Page](/github-images/wireframes/how-to.png)
+
+Trigger Point Page
+![Sign Up Page](/github-images/wireframes/trigger-point.png)
+
+Past Treatments Page
+![Past Treatments Page](/github-images/wireframes/past-treatments.png)
 
 ## 6. Front-end Structure - React Components Map 
-* (Example) __Index.js__ (stateless)
+* __Index.js__ (stateless)
     * __App.js__ (stateful)
         * __LandingPage.js__ (stateless) 
         * __Login.js__ (stateful) - user table (user name, full name, password)
         * __SignUp.js__ (stateful) - user table (user name, full name, password)
         * __Home.js__ (stateful) - trigger-point table (user_id, image,   title, content, date-created)
-        * __About.js__ (stateless) -
-        * __HowTo.js__ (stateless) -
+        * __About.js__ (stateless) 
+        * __HowTo.js__ (stateless) 
         * __TriggerPoint.js__ (stateful) - trigger-points-user table (user_id, image, title, content, date-created)
         * __PastTreatments.js__ (stateful) - notes table (trigger_point_id, title, content, date-created)
         * __Navbar.js__ (stateful) - user table
-        
+        * __Noteform.js__ (stateful) - notes table (trigger_point_id, title, content, date-created)
+
+
 
 ## 7. Back-end Structure - Business Objects 
 *  Users (database table)
@@ -111,22 +135,28 @@ Register Page
     * date-created (auto generated)
 
 
-    
-
-
-
-## 8. API Documentation (to do later)
-API Documentation details:
-* (Example) get all users
-
-
 
 ## Screenshots (to do later)
 (Example) Landing Page
 :-------------------------:
-![Landing Page](/github-images/screenshots/landing-page-screenshot.png)
-Register Page
-![Register Page](/github-images/screenshots/register-page-screenshot.png)
+![Landing Page](/github-images/screenshots/landing.png)
+Sign Up Page
+![Register Page](/github-images/screenshots/sign-up.png)
+Log In Page
+![Log In Page](/github-images/screenshots/log-in.png)
+Home Page
+![Home Page](/github-images/screenshots/home.png)
+About Page
+![Register Page](/github-images/screenshots/about.png)
+How To Page
+![Register Page](/github-images/screenshots/how-to.png)
+Trigger Point Page
+![Register Page](/github-images/screenshots/trigger-point.png)
+Past Treatments Page
+![Register Page](/github-images/screenshots/past-treatments.png)
+
+
+
 
 ## Development Roadmap (to do later)
 This is v1.0 of the app, but future enhancements are expected to include:

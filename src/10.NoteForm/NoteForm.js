@@ -24,7 +24,6 @@ class NoteForm extends Component {
     }
 
 
-
     fetch(`${config.API_ENDPOINT}/notes/${note.trigger_point_id}`,
       {
         method: 'POST',
