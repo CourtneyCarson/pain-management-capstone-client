@@ -1,5 +1,5 @@
 # Pain Management Capstone 
-This will be a troubleshooting application for people to seek out a solution for their pain, by directing them to a trigger point corresponding to their area of pain. There will be a guide on how Trigger Points work, and how to fix them via massage therapy. 
+This is a troubleshooting application for people to seek out a solution for their pain. Users can view a guide on how to treat trigger points via massage therapy, and a simple guideline page on what a trigger point is. Users will be guided to a trigger point corresponding to their area of pain by selecting an image, they can save this trigger point to their account and add notes. 
 
 
 ## 1. Working Prototype 
