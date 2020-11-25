@@ -5,8 +5,13 @@
 }  */
 
 
+.home-h1 {
+  font-size: 18pt;
+  font-weight:bold;
+  margin-top: 2em;
+}
+
 .tp-button-links {
 justify-content: right;
 border:black;
-
 }

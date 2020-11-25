@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import './PastTreatments.css'
-import NoteForm from '../10.NoteForm/NoteForm'
-import config from '../config'
-import TokenService from '../services/token-service'
+import React, { Component } from 'react';
+import './PastTreatments.css';
+import NoteForm from '../10.NoteForm/NoteForm';
+import config from '../config';
+import TokenService from '../services/token-service';
 
 class PastTreatments extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       error: null,
       triggerpointsByUserId: [],
       Notes: []
-    }
+    };
   }
 
   componentDidMount() {
-    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`
+    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`;
 
     fetch(URL, {
       headers: {
@@ -24,7 +24,7 @@ class PastTreatments extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         this.setState({
           triggerpointsByUserId: data,
         });
@@ -32,7 +32,7 @@ class PastTreatments extends Component {
       .catch((error) => console.log(error));
 
     /// get all notes by tp id
-    URL = `${config.API_ENDPOINT}/notes`
+    URL = `${config.API_ENDPOINT}/notes`;
 
     fetch(URL, {
       headers: {
@@ -41,7 +41,7 @@ class PastTreatments extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         this.setState({
           Notes: data,
         });
@@ -52,9 +52,10 @@ class PastTreatments extends Component {
 
 
   render() {
-    console.log(this.state.triggerpointsByUserId)
+    console.log(this.state.triggerpointsByUserId);
 
     return (
+
 
       <div className="past-treatments-page">
 
@@ -67,9 +68,9 @@ class PastTreatments extends Component {
           <div className='saved-tp'>
             {this.state.triggerpointsByUserId.map(tpByUser => {
               let Notes = this.state.Notes.filter(Note => {
-                return Note.trigger_point_id == tpByUser.id
-              })
-              console.log(tpByUser.id)
+                return Note.trigger_point_id == tpByUser.id;
+              });
+              console.log(tpByUser.id);
 
 
               return (
@@ -86,7 +87,7 @@ class PastTreatments extends Component {
                           <h3>{note.title}</h3>
                           <p>{note.content}</p>
                         </div>
-                      )
+                      );
                     })}
                   </div>
 
@@ -95,13 +96,14 @@ class PastTreatments extends Component {
 
                 </div>
 
-              )
+              );
             })}
           </div>
         </section>
       </div>
-    )
+
+    );
   }
 }
 
-export default PastTreatments
+export default PastTreatments;

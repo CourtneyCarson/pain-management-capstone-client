@@ -72,21 +72,24 @@ class SignUp extends Component {
             <h3 className="header">Sign Up</h3>
             <form className="signup-form" onSubmit={this.handleSubmit}>
               {errorMessage}
-              <label htmlFor="username">Email</label>
+
+              <label className="signup-label">Email
               <input
                 className="sign-up-input"
                 type="text"
                 name="registerUsername"
                 placeholder="email@email.com"
-                required />
+                  required />
+                </label>
 
-              <label htmlFor="password">Password</label>
+              <label className="signup-label">Password
               <input
                 className="sign-up-input"
                 type="password"
                 name="registerPassword"
                 placeholder="password"
-                required />
+                  required />
+                </label>
            
               <button type="submit" className="sign-up-button">Register</button>
             

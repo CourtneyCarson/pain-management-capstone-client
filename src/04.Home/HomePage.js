@@ -5,12 +5,10 @@ import './HomePage.css'
 export default function HomePage(props) {
   return (
 
-
+<main>
     <div className="home-page">
-      <header>
-        <h3>Select The Area You Are Feeling Pain</h3>
-      </header>
-
+        <h1 className='home-h1'>Select The Area You Are Feeling Pain</h1>
+   
       <section>
 
         <div className='tp-button-links'>
@@ -46,6 +44,7 @@ export default function HomePage(props) {
 
         </div>
       </section>
-    </div>
+      </div>
+      </main>
   )
 }

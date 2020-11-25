@@ -1,27 +1,27 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom"
-import AuthApiService from '../services/auth-api-service'
-import './LogIn.css'
-import TokenService from '../services/token-service'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import AuthApiService from '../services/auth-api-service';
+import './LogIn.css';
+import TokenService from '../services/token-service';
 
 
 class LogIn extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       error: null,
       params: {
         loginUsername: "",
         loginPassword: "",
       },
-    }
+    };
   }
 
 
   handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const { loginUsername, loginPassword } = event.target
+    const { loginUsername, loginPassword } = event.target;
 
     AuthApiService.postLogin({
       email: loginUsername.value,
@@ -30,34 +30,34 @@ class LogIn extends Component {
     })
 
       .then(response => {
-        TokenService.saveAuthToken(response.authToken)
-        TokenService.saveUserId(response.userId)
-        loginUsername.value = ""
-        loginPassword.value = ""
-        window.location = '/home'
+        TokenService.saveAuthToken(response.authToken);
+        TokenService.saveUserId(response.userId);
+        loginUsername.value = "";
+        loginPassword.value = "";
+        window.location = '/home';
       })
       .catch(err => {
-        console.log(err)
-      })
-  }
+        console.log(err);
+      });
+  };
 
   validateloginUsername(inputEmail) {
     let outputEmail = inputEmail;
-    let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
+    let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/;
     if (!inputEmail.match(mailformat)) {
-      outputEmail = ""
+      outputEmail = "";
     }
-    return outputEmail
+    return outputEmail;
   }
 
   validateLoginPassword(inputLoginPassword) {
-    let outputLoginPassword = inputLoginPassword
-    let loginPasswordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/
+    let outputLoginPassword = inputLoginPassword;
+    let loginPasswordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
 
     if (!inputLoginPassword.match(loginPasswordFormat)) {
-      outputLoginPassword = ""
+      outputLoginPassword = "";
     }
-    return outputLoginPassword
+    return outputLoginPassword;
   }
 
 
@@ -66,7 +66,7 @@ class LogIn extends Component {
 
   render() {
     const errorMessage = this.state.error ? (
-      <p className="error-message">{this.state.error}</p>) : (false)
+      <p className="error-message">{this.state.error}</p>) : (false);
 
     return (
       <section className="login-component">
@@ -77,23 +77,25 @@ class LogIn extends Component {
             <form className='login-form' onSubmit={this.handleSubmit}>
               {errorMessage}
 
-              <label htmlFor="username">Email</label>
+              <label>Email
               <input
-                className="login-input"
-                type="text"
-                name='loginUsername'
-                placeholder='user@email.com'
-                required
-              />
+                  className="login-input"
+                  type="text"
+                  name='loginUsername'
+                  placeholder='user@email.com'
+                  required
+                />
+              </label>
 
-              <label htmlFor="password">Password</label>
+              <label>Password
               <input
-                className='login-input'
-                type='password'
-                name='loginPassword'
-                placeholder='Password1'
-                required
-              />
+                  className='login-input'
+                  type='password'
+                  name='loginPassword'
+                  placeholder='Password1'
+                  required
+                />
+              </label>
 
               <button className='login-button' type='submit'>
                 Log In
@@ -106,12 +108,12 @@ class LogIn extends Component {
               <p>Password1</p>
               {/* <Link to="sign-up" className="register-link">Sign Up</Link></p> */}
             </div>
-            
+
           </div>
         </div>
       </section >
-    )
+    );
   }
 }
 
-export default LogIn
+export default LogIn;

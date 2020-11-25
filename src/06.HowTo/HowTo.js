@@ -4,9 +4,10 @@ import './HowTo.css'
 export default function HowTo(props) {
   return (
 
+    <main>
     <div className='how-to-page'>
 
-      <header className='banner'>
+      <header>
         <h1>Techniques To Treat Trigger Points</h1>
       </header>
       
@@ -44,6 +45,7 @@ export default function HowTo(props) {
         <img src="https://live.staticflickr.com/65535/50607295067_35cd959ccf_w.jpg" alt="trigger point " />
       </div>
 
-    </div>
+      </div>
+      </main>
   )
 }

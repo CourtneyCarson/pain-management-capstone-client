@@ -9,6 +9,14 @@
   margin-left: 2em;
 }
 
+.past-tx-header {
+  font-size: 22.5pt;
+}
+
+.past-tx-title {
+  font-size: 18pt;
+}
+
 .same {
   text-align: left;
 }
