@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import AuthApiService from '../services/auth-api-service';
 import './LogIn.css';
 import TokenService from '../services/token-service';
@@ -69,49 +68,53 @@ class LogIn extends Component {
       <p className="error-message">{this.state.error}</p>) : (false);
 
     return (
-      <section className="login-component">
-        <div className="log-in-page">
-          <h1>Trigger Point Troubleshooter</h1>
-          <h3>Log In</h3>
-          <div className="form-div">
-            <form className='login-form' onSubmit={this.handleSubmit}>
-              {errorMessage}
+      <main>
+        <section className="login-component">
 
-              <label>Email
+          <div className="log-in-page">
+            <h1>Trigger Point Troubleshooter</h1>
+            <h2 className='log-in-header'>Log In</h2>
+
+            <div className="form-div">
+              <form className='login-form' onSubmit={this.handleSubmit}>
+                {errorMessage}
+
+                <label className='login-label'>Email
               <input
-                  className="login-input"
-                  type="text"
-                  name='loginUsername'
-                  placeholder='user@email.com'
-                  required
-                />
-              </label>
+                    className="login-input"
+                    type="text"
+                    name='loginUsername'
+                    placeholder='user@email.com'
+                    required
+                  />
+                </label>
 
-              <label>Password
+                <label className='login-label'>Password
               <input
-                  className='login-input'
-                  type='password'
-                  name='loginPassword'
-                  placeholder='Password1'
-                  required
-                />
-              </label>
+                    className='login-input'
+                    type='password'
+                    name='loginPassword'
+                    placeholder='Password1'
+                    required
+                  />
+                </label>
 
-              <button className='login-button' type='submit'>
-                Log In
+                <button className='login-button' type='submit'>
+                  Log In
               </button>
-            </form>
+              </form>
 
-            <div className="link-register-div">
-              <h4> Demo Account: </h4>
-              <p>user@email.com</p>
-              <p>Password1</p>
-              {/* <Link to="sign-up" className="register-link">Sign Up</Link></p> */}
+              <div className="link-register-div">
+                <p className='demo'> Demo Account: </p>
+                <p>user@email.com</p>
+                <p>Password1</p>
+                {/* <Link to="sign-up" className="register-link">Sign Up</Link></p> */}
+              </div>
+
             </div>
-
           </div>
-        </div>
-      </section >
+        </section >
+      </main>
     );
   }
 }

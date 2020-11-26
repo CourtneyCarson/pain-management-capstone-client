@@ -1,4 +1,4 @@
-import config from '../config'
+import config from '../config';
 
 const AuthApiService = {
   // register user
@@ -8,38 +8,38 @@ const AuthApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
-      }, 
+      },
       body: JSON.stringify(user),
     })
-      .then(res => 
+      .then(res =>
         (!res.ok) ?
           res.json().then(e => Promise.reject(e)) :
           res.json()
-    )
+      )
       .catch(err => {
-      console.log('error:', err)
-    })
+        console.log('error:', err);
+      });
   },
 
-//login user -- CHECK PATH/AUTH/LOGIN ****************
+  //login user -- CHECK PATH/AUTH/LOGIN ****************
   postLogin(credentials) {
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
-      method: 'POST', 
+      method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
       body: JSON.stringify(credentials),
     })
-      .then(res => 
+      .then(res =>
         (!res.ok) ?
           res.json().then(e => Promise.reject(e)) :
           res.json()
-    )
+      )
       .catch(err => {
-      console.log('error:', err)
-    })
+        console.log('error:', err);
+      });
   },
 
-}
+};
 
-export default AuthApiService
+export default AuthApiService;

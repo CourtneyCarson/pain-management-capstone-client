@@ -14,6 +14,10 @@
   flex-direction: column;
 }
 
+.log-in-header {
+font-size: 18pt;
+}
+
 .login-label {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,10 @@
 
 .login-input, .login-form {
   padding: .3em .5em;
+}
+
+.demo {
+  font-size: 15pt;
 }
 
 .login-button {

@@ -1,60 +1,60 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './SignUp.css'
-import AuthApiService from '../services/auth-api-service'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './SignUp.css';
+import AuthApiService from '../services/auth-api-service';
 
 class SignUp extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       error: null,
       params: {
         registerUsername: "",
         registerPassword: "",
       },
-    }
+    };
   }
 
   handleLoginSuccess = user => {
-    window.location = '/homepage'
-  }
+    window.location = '/homepage';
+  };
 
   // signup event handlers
   handleSubmit = (event) => {
-    event.preventDefault()
-    const { registerUsername, registerPassword } = event.target
-    this.setState({ error: null })
+    event.preventDefault();
+    const { registerUsername, registerPassword } = event.target;
+    this.setState({ error: null });
     AuthApiService.postUser({
       email: registerUsername.value,
       password: registerPassword.value,
     })
 
       .then(response => {
-        registerUsername.value = ''
-        registerPassword.value = ''
-        window.location = '/home'
+        registerUsername.value = '';
+        registerPassword.value = '';
+        window.location = '/home';
       })
       .catch(res => {
-        this.setState({ error: res.error })
-      })
-  }
+        this.setState({ error: res.error });
+      });
+  };
 
   validateUsername(inputEmail) {
-    let outputEmail = inputEmail
-    let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/
+    let outputEmail = inputEmail;
+    let mailformat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/;
     if (!inputEmail.match(mailformat)) {
-      outputEmail = ""
+      outputEmail = "";
     }
-    return outputEmail
+    return outputEmail;
   }
 
   validatePassword(inputPassword) {
-    let outputPassword = inputPassword
-    let passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/
+    let outputPassword = inputPassword;
+    let passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
     if (!inputPassword.match(passwordFormat)) {
-      outputPassword = ""
+      outputPassword = "";
     }
-    return outputPassword
+    return outputPassword;
   }
 
 
@@ -62,7 +62,7 @@ class SignUp extends Component {
   render() {
     const errorMessage = this.state.error ? (
       <p className="error-message">{this.state.error}</p>
-    ) : (false)
+    ) : (false);
     return (
       <section className='sign-up-component'>
         <div className="sign-up-page">
@@ -75,25 +75,25 @@ class SignUp extends Component {
 
               <label className="signup-label">Email
               <input
-                className="sign-up-input"
-                type="text"
-                name="registerUsername"
-                placeholder="email@email.com"
+                  className="sign-up-input"
+                  type="text"
+                  name="registerUsername"
+                  placeholder="email@email.com"
                   required />
-                </label>
+              </label>
 
               <label className="signup-label">Password
               <input
-                className="sign-up-input"
-                type="password"
-                name="registerPassword"
-                placeholder="password"
+                  className="sign-up-input"
+                  type="password"
+                  name="registerPassword"
+                  placeholder="password"
                   required />
-                </label>
-           
+              </label>
+
               <button type="submit" className="sign-up-button">Register</button>
-            
-              </form>
+
+            </form>
             <div className="link-register-div">
               <p> Already Have An Account?
               <Link to="/log-in" className="login-link">Log In</Link></p>
@@ -102,7 +102,7 @@ class SignUp extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
-export default SignUp
+export default SignUp;
