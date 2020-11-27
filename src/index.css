@@ -16,10 +16,6 @@ body {
   background: paleturquoise;
 }
 
-/* html, body, #root, .App {
-  /* min-height: 100%;
-  height: 100%; 
-} */
 
 a {
   color: black;
@@ -46,3 +42,8 @@ img {
     display: flex;
     }
 }
+
+/* html, body, #root, .App {
+  /* min-height: 100%;
+  height: 100%; 
+} */

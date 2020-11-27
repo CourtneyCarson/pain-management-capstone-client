@@ -3,7 +3,6 @@ import './TriggerPoint.css';
 import { Link } from 'react-router-dom';
 import TokenService from '../services/token-service';
 import config from '../config';
-import HomePage from '../04.Home/HomePage';
 
 class TriggerPoint extends Component {
   constructor(props) {
@@ -19,15 +18,12 @@ class TriggerPoint extends Component {
     event.preventDefault();
     const { triggerpointId } = event.target;
     this.setState({ error: null });
-    // console.log(triggerpointId.value)
     let currentUserId = TokenService.getUserId();
-    // console.log(currentUserId)
     this.postTriggerPoint(triggerpointId.value);
     this.props.history.push('/past-treatments');
   };
 
   componentDidMount() {
-    // console.log(TokenService.getAuthToken());
     let id = this.props.match.params.id;
 
     let URL = `${config.API_ENDPOINT}/tp/${id}`;
@@ -39,7 +35,6 @@ class TriggerPoint extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         this.setState({
           TriggerPoint: data,
         });

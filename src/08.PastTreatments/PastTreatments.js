@@ -24,7 +24,6 @@ class PastTreatments extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         this.setState({
           triggerpointsByUserId: data,
         });
@@ -41,7 +40,6 @@ class PastTreatments extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         this.setState({
           Notes: data,
         });
@@ -52,7 +50,6 @@ class PastTreatments extends Component {
 
 
   render() {
-    // console.log(this.state.triggerpointsByUserId);
 
     return (
       <main>
@@ -69,7 +66,6 @@ class PastTreatments extends Component {
                 let Notes = this.state.Notes.filter(Note => {
                   return Note.trigger_point_id == tpByUser.id;
                 });
-                // console.log(tpByUser.id);
 
 
                 return (

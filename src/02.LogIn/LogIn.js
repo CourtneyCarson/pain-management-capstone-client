@@ -108,7 +108,6 @@ class LogIn extends Component {
                 <p className='demo'> Demo Account: </p>
                 <p>user@email.com</p>
                 <p>Password1</p>
-                {/* <Link to="sign-up" className="register-link">Sign Up</Link></p> */}
               </div>
 
             </div>

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import PastTreatments from '../08.PastTreatments/PastTreatments'
 import config from '../config';
-// import { render } from 'react-dom'
 import TokenService from '../services/token-service';
 import './NoteForm.css';
 
@@ -17,7 +15,6 @@ class NoteForm extends Component {
 
   handleSubmit = (event) => {
     // event.preventDefault();
-    // console.log(this.props.tpId);
     const note = {
       title: this.state.title,
       content: this.state.content,
@@ -35,7 +32,6 @@ class NoteForm extends Component {
         },
       })
       .then((res) => {
-        console.log(note);
         if (!res.ok) {
           return res.json().then((error) => {
             throw error;
@@ -54,7 +50,6 @@ class NoteForm extends Component {
   render() {
     return (
       <section className='add-notes'>
-        {/* <h4 className='add-notes-title'>Add Notes</h4> */}
         <form className='add-notes-form' onSubmit={this.handleSubmit}>
 
           <label> Title
@@ -64,7 +59,6 @@ class NoteForm extends Component {
               placeholder='write title'
               value={this.state.title}
               name='title'
-              // id='title'
               onChange={(event) => this.setState({ title: event.target.value })}
               required
             /></label>
@@ -76,7 +70,6 @@ class NoteForm extends Component {
               placeholder='write notes here'
               value={this.state.content}
               name='note'
-              // id='note'
               onChange={(event) => this.setState({ content: event.target.value })}
               required
             />
