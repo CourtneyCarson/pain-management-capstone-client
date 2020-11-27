@@ -8,7 +8,7 @@ export default function AboutPage(props) {
 
         <header>
           <h1>What is a Trigger Point?</h1>
-          <img src="https://live.staticflickr.com/65535/50607295102_041791c53c_w.jpg" alt="trigger point" />
+          <img src="https://live.staticflickr.com/65535/50607295102_041791c53c_w.jpg" alt="trigger point" className='about-img' />
         </header>
 
         <section className='about-page-section'>

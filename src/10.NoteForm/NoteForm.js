@@ -16,7 +16,7 @@ class NoteForm extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // console.log(this.props.tpId);
     const note = {
       title: this.state.title,

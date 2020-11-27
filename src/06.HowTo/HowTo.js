@@ -41,8 +41,8 @@ export default function HowTo(props) {
           </div>
         </section>
         <div>
-          <img src="https://live.staticflickr.com/65535/50607179136_db57fc8acd_w.jpg" alt="trigger point " />
-          <img src="https://live.staticflickr.com/65535/50607295067_35cd959ccf_w.jpg" alt="trigger point " />
+          <img className='how-to-img' src="https://live.staticflickr.com/65535/50607179136_db57fc8acd_w.jpg" alt="trigger point " />
+          <img className='how-to-img' src="https://live.staticflickr.com/65535/50607295067_35cd959ccf_w.jpg" alt="trigger point " />
         </div>
 
       </div>

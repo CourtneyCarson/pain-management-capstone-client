@@ -1,17 +1,20 @@
-.how-to-paragraph{
-  padding: 2em;
-  text-align: left;
-  flex: 1;
-  }
-
-  .how-to-h3 {
-    font-size: 17pt;
-    font-weight:bold;
-  
-  }
+.how-to-img {
+  max-width: 100%;
+}
 
 @media screen and (min-width:800px){
   .how-to-section {
     display:flex;
     }
+}
+
+.how-to-paragraph{
+  padding: 2em;
+  text-align: left;
+  flex: 1;
+}
+
+.how-to-h3 {
+    font-size: 17pt;
+    font-weight:bold;
 }

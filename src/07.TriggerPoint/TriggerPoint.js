@@ -62,6 +62,7 @@ class TriggerPoint extends Component {
         trigger_points_id,
       }),
     })
+      // errors + if try to save duplicates to account
       .then(res =>
         (!res.ok)
           ? res.json().then(e => this.setState({ error: e })
