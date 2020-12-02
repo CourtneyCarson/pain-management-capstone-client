@@ -59,6 +59,7 @@ class NoteForm extends Component {
               placeholder='write title'
               value={this.state.title}
               name='title'
+              id='title'
               onChange={(event) => this.setState({ title: event.target.value })}
               required
             /></label>
@@ -70,6 +71,7 @@ class NoteForm extends Component {
               placeholder='write notes here'
               value={this.state.content}
               name='note'
+              id='note'
               onChange={(event) => this.setState({ content: event.target.value })}
               required
             />

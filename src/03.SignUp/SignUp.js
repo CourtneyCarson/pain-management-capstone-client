@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
 import AuthApiService from '../services/auth-api-service';
+import TokenService from '../services/token-service';
 
 class SignUp extends Component {
   constructor(props) {
@@ -15,9 +16,10 @@ class SignUp extends Component {
     };
   }
 
-  handleLoginSuccess = user => {
-    window.location = '/homepage';
-  };
+  // unneeded code since have inside component did mount
+  // handleLoginSuccess = user => {
+  //   window.location = '/homepage';
+  // };
 
   // signup event handlers
   handleSubmit = (event) => {
@@ -30,9 +32,21 @@ class SignUp extends Component {
     })
 
       .then(response => {
-        registerUsername.value = '';
-        registerPassword.value = '';
-        window.location = '/home';
+
+        // add so that auth is checked when you register 
+  //  console.log('user:', response)
+          // userName.value = ''
+          // password.value = ''
+          // repeatPassword.value = ''
+          TokenService.saveAuthToken(response.authToken)
+          TokenService.saveUserId(response.id)
+
+
+       // registerUsername.value = '';
+        //registerPassword.value = '';
+        // window.location = '/home';
+        window.location = '/log-in';
+
       })
       .catch(res => {
         this.setState({ error: res.error });

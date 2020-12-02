@@ -1,9 +1,22 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import './NavBar.css';
+import TokenService from '../services/token-service'
 
 
 export default class NavBar extends React.Component {
+
+  logOutClick = () => {
+    //console.log('Logging out')
+    TokenService.clearAuthToken()
+    TokenService.getUserId = (id) => {
+        //console.log(id)
+    }
+
+    window.location = '/'
+}
+
+
   render() {
     return (
       <header className='nav-bar'>
@@ -41,7 +54,8 @@ export default class NavBar extends React.Component {
                 <Link to='/about'>About</Link>
                 <Link to='/how-to'>How To</Link>
                 <Link to='/past-treatments'>Account</Link>
-                <Link to='/log-out'>Log Out</Link>
+                {/* <Link to='/log-out'>Log Out</Link> */}
+                <Link to="/" onClick={this.logOutClick}>Log Out</Link>
               </>
             );
           }} />
@@ -51,7 +65,7 @@ export default class NavBar extends React.Component {
                 <Link to='/home'>Home</Link>
                 <Link to='/how-to'>How To</Link>
                 <Link to='/past-treatments'>Account</Link>
-                <Link to='/log-out'>Log Out</Link>
+                <Link to="/" onClick={this.logOutClick}>Log Out</Link>
               </>
             );
           }} />
@@ -62,7 +76,7 @@ export default class NavBar extends React.Component {
                 <Link to='/home'>Home</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/past-treatments'>Account</Link>
-                <Link to='/log-out'>Log Out</Link>
+                <Link to="/" onClick={this.logOutClick}>Log Out</Link>
               </>
             );
           }} />
@@ -73,7 +87,7 @@ export default class NavBar extends React.Component {
                 <Link to='/home'>Home</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/past-treatments'>Account</Link>
-                <Link to='/log-out'>Log Out</Link>
+                <Link to="/" onClick={this.logOutClick}>Log Out</Link>
               </>
             );
           }} />
@@ -84,7 +98,7 @@ export default class NavBar extends React.Component {
                 <Link to='/home'>Home</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/how-to'>How To</Link>
-                <Link to='/log-out'>Log Out</Link>
+                <Link to="/" onClick={this.logOutClick}>Log Out</Link>
               </>
             );
           }} />

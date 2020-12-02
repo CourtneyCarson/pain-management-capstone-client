@@ -15,7 +15,17 @@ class PastTreatments extends Component {
   }
 
   componentDidMount() {
-    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points`;
+// changes to check auth before showing user's saved trigger points // 
+    // let currentUser = TokenService.getUserId();
+    // console.log(currentUser)
+
+    // //if the user is not logged in, send him to landing page
+    // if (!TokenService.hasAuthToken()) {
+    //   window.location = '/';
+    // }
+    // let URL = `${config.API_ENDPOINT}/tp/user/trigger-points/${currentUser}`;
+
+    let URL = `${config.API_ENDPOINT}/tp/user/trigger-points/`;
 
     fetch(URL, {
       headers: {
