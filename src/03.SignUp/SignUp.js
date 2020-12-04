@@ -16,10 +16,6 @@ class SignUp extends Component {
     };
   }
 
-  // unneeded code since have inside component did mount
-  // handleLoginSuccess = user => {
-  //   window.location = '/homepage';
-  // };
 
   // signup event handlers
   handleSubmit = (event) => {
@@ -34,17 +30,9 @@ class SignUp extends Component {
       .then(response => {
 
         // add so that auth is checked when you register 
-  //  console.log('user:', response)
-          // userName.value = ''
-          // password.value = ''
-          // repeatPassword.value = ''
-          TokenService.saveAuthToken(response.authToken)
-          TokenService.saveUserId(response.id)
+        TokenService.saveAuthToken(response.authToken);
+        TokenService.saveUserId(response.id);
 
-
-       // registerUsername.value = '';
-        //registerPassword.value = '';
-        // window.location = '/home';
         window.location = '/log-in';
 
       })

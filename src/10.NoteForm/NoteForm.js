@@ -14,13 +14,14 @@ class NoteForm extends Component {
   }
 
   handleSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
+    //better to call payload instead of note
     const note = {
       title: this.state.title,
       content: this.state.content,
       trigger_point_id: this.props.tpId,
     };
-
+// console.log(note)
 
     fetch(`${config.API_ENDPOINT}/notes/${note.trigger_point_id}`,
       {
@@ -39,8 +40,9 @@ class NoteForm extends Component {
         }
         return res.json();
       })
-      .then((note) => {
-
+      .then((results) => {
+        console.log(results);
+        window.location = '/past-treatments'
       })
       .catch((error) => {
         console.log({ error });
@@ -76,7 +78,7 @@ class NoteForm extends Component {
               required
             />
           </label>
-          <button className='note-button'>Add Note</button>
+          <button className='note-button' type='submit'>Add Note</button>
 
         </form>
       </section>

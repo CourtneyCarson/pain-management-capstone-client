@@ -4,6 +4,7 @@ import NoteForm from '../10.NoteForm/NoteForm';
 import config from '../config';
 import TokenService from '../services/token-service';
 
+
 class PastTreatments extends Component {
   constructor(props) {
     super(props);
@@ -15,15 +16,7 @@ class PastTreatments extends Component {
   }
 
   componentDidMount() {
-// changes to check auth before showing user's saved trigger points // 
-    // let currentUser = TokenService.getUserId();
-    // console.log(currentUser)
-
-    // //if the user is not logged in, send him to landing page
-    // if (!TokenService.hasAuthToken()) {
-    //   window.location = '/';
-    // }
-    // let URL = `${config.API_ENDPOINT}/tp/user/trigger-points/${currentUser}`;
+    
 
     let URL = `${config.API_ENDPOINT}/tp/user/trigger-points/`;
 
@@ -70,25 +63,27 @@ class PastTreatments extends Component {
           </header>
           <section className='past-treatment'>
 
-
+          
             <div className='saved-tp'>
-              {this.state.triggerpointsByUserId.map(tpByUser => {
+              {this.state.triggerpointsByUserId.map((tpByUser, key) => {
                 let Notes = this.state.Notes.filter(Note => {
-                  return Note.trigger_point_id == tpByUser.id;
+                  return Note.trigger_point_id === tpByUser.id;
+
                 });
 
 
                 return (
-                  <div className='past-tx-box'>
+                  <div className='past-tx-box'key={key}>
                     <div className='same'>
                       <h2 className='past-tx-title'>{tpByUser.title}</h2>
                       <img src={tpByUser.image} alt="trigger point" />
                       <p>{tpByUser.content}</p>
                     </div>
                     <div className='same'>
-                      {Notes.map(note => {
+                      {Notes.map((note, key) => {
                         return (
-                          <div className='notes-inside'>
+                          //key={note.id} tried this key but didn't fix unique key id warning
+                          <div className='notes-inside' key={key}>
                             <h3>{note.title}</h3>
                             <p>{note.content}</p>
                           </div>
