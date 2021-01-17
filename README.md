@@ -5,10 +5,6 @@ This is a troubleshooting application for people to seek out a solution for thei
 ## 1. Working Prototype 
 You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://dry-bastion-25929.herokuapp.com/
 
-You can access repositories here: 
-React app: https://github.com/CourtneyCarson/secret-camping-sites-client
-Node app: https://github.com/CourtneyCarson/secret-camping-sites-server
-
 ## 2. User Stories 
 This app is for two types of users: a visitor and a logged-in user
   as a visitor
