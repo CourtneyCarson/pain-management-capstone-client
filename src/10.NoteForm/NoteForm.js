@@ -21,7 +21,7 @@ class NoteForm extends Component {
       content: this.state.content,
       trigger_point_id: this.props.tpId,
     };
-// console.log(note)
+    // console.log(note)
 
     fetch(`${config.API_ENDPOINT}/notes/${note.trigger_point_id}`,
       {
@@ -42,7 +42,7 @@ class NoteForm extends Component {
       })
       .then((results) => {
         console.log(results);
-        window.location = '/past-treatments'
+        window.location = '/past-treatments';
       })
       .catch((error) => {
         console.log({ error });
